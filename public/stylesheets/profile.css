@@ -1,0 +1,16 @@
+body {
+    background-color: lightpink;
+    font-size: 40px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h4 {
+    text-align: center;
+}
+
+a {
+    color: black;
+    border: 1px solid rgb(232, 240, 118);
+    font-size: 20px;
+    text-align: left;
+}
