@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/users.css')
+  form(action='/users', method='post')
+  h8= title
+    br
+    label Username :
+    input(type='username',name='username')
+    br
+    label Password :
+    input(type='password',name='password')
+    br
+    input(type='submit',value='create')
