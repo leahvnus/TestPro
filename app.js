@@ -11,11 +11,6 @@ var profileRouter = require('./routes/profile');
 
 var app = express();
 
-var mongoose = require('mongoose');
-var mongooseUri = require('mongodb://localhost:27017/myuser');
-var Schema = mongoose.Schema;
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
