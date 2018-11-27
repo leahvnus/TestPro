@@ -7,3 +7,8 @@ body {
 h4 {
     text-align: center;
 }
+
+div.add {
+    text-align: center;
+    background-color: cornflowerblue;
+}

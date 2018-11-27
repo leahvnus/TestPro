@@ -1,19 +1,14 @@
 extends layout
 
 block content
-  
-  form(action='/users', method='post')
-      
-      link(rel='stylesheet', href='/stylesheets/users.css')
-
-      h1= title
-      
-      label ชื่อผู้ใช้ 
-      input(type="username" name="username" placeholder="username")
-  
-      label รหัสผ่าน 
-      input(type="password" name="password" placeholder="password")
-  
-      input(type='submit', value='submit')
+  link(rel='stylesheet', href='/stylesheets/profile.css')
+  h1= title
+  form(action='/users',method='post')
+    label ชื่อผู้ใช้ 
+    input(type="username" name="username" placeholder="username")
+    br
+    label รหัสผ่าน 
+    input(type="password" name="password" placeholder="password")
+    br
+    input(type='submit', value='submit')
     
-

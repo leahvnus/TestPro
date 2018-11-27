@@ -8,11 +8,12 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var profileRouter = require('./routes/profile');
+var absenceRouter = require('./routes/absence');
 
 var app = express();
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/myuser');
-//var Schema = mongoose.Schema;
+var Schema = mongoose.Schema;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,6 +29,7 @@ app.use('/index', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', loginRouter);
 app.use('/profile', profileRouter);
+app.use('/absence', absenceRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
