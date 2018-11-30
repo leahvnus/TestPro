@@ -11,8 +11,8 @@ h4 {
 div.user {
     background-color: rgb(255, 255, 255);
     text-align: center;
-    width: 250px;
-    padding: 100px;
+    width: 300px;
+    padding: 30px;
     border: 5px solid rgb(27, 27, 29);
     margin: auto;
     height: auto;
@@ -64,9 +64,9 @@ input[type=email]{
     margin-bottom: 10px;
 }
 input[type=submit]{
-    border: 2px solid #464242ad;
+    border: 2px solid #03d654;
     border-radius: 4px;
-    background-color: #f8f8f8;
+    background-color: #03d654;
     width: 100px;
     height: 40px;
 }

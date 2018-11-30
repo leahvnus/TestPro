@@ -14,14 +14,12 @@ h1 {
 div.log {
     background-color: rgb(255, 255, 255);
     text-align: center;
-    /*box-shadow: black 0.3em 0.3em 0.3em;*/
-    width: 270px;
-    padding: 100px;
+    width: 300px;
+    padding: 30px;
     border: 5px solid rgb(255, 157, 217);
     margin: auto;
-    height: 200px;
+    height: auto;
     border-radius: 10px;
-
 }
 input[type=password]{
     width: 300px;
@@ -45,9 +43,9 @@ input[type=username]{
     margin-bottom: 10px;
 }
 input[type=submit]{
-    border: 2px solid rgb(255, 157, 217);
+    border: 2px solid rgb(250, 124, 202);
     border-radius: 4px;
-    background-color: #f8f8f8;
+    background-color: rgb(250, 124, 202);
     width: 70px;
     height: 30px;
 }

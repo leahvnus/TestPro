@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1 แบบใบลาอุปสมบท
+  form(name='ab2',method='post')
+    div(id='d2')
+      label (เขียนที่) : 
+      input(type="text",name="write")
+      br 
+      label วันที่ 
+      input(type="date", name="date1")
+      br
+      label เรื่อง ขอลาพักผ่อน
+      br
+      label (คำขึ้นต้น)
+      input(type="text",name="prologue")
+      br
+      label ข้าพเจ้า
+      input(type="text",name="me")
+      label ตำแหน่ง
+      input(type="text",name="rank")
+      br
+      label ระดับ
+      input(type="text",name="degree")
+      label สังกัด
+      input(type="text",name="affiliation")
+      br
+      label มีวันลาสะสม
+      input(type="number",name="number")
+      label วัน

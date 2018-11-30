@@ -1,127 +1,73 @@
 extends layout
 
 block content
+  link(rel='stylesheet', href='/stylesheets/ab.css')
   h1 แบบใบลาอุปสมบท
-  form(name='ab1',method='post')
-    div(id='d1')
-      label (เขียนที่) : 
-      input(type="text",name="write")
-      br 
-      label วันที่ 
-      input(type="date", name="date1")
-      br
-      label เรื่อง  ขอลาอุปสมบท
-      br
-      label (คำขึ้นต้น)
-      input(type="text",name="prologue")
-      br
-      label ข้าพเจ้า
-      input(type="text",name="me")
-      label ตำแหน่ง
-      input(type="text",name="rank")
-      br
-      label ระดับ
-      input(type="text",name="degree")
-      label สังกัด
-      input(type="text",name="affiliation")
-      br
-      label เกิดวันที่
-      input(type="text",name="birthd")
-      label เดือน
-      input(type="text",name="birthm")
-      label พ.ศ.
-      input(type="text",name="birthb")
-      label เข้ารับราชการเมื่อวันที่
-      input(type="text",name="birthd1")
-      label เดือน
-      input(type="text",name="birthm1")
-      label พ.ศ.
-      input(type="text",name="birthb1")
-      br
-      label ข้าพเจ้า   เคย
-      input(type="checkbox",name="ever")
-      label ไม่เคย
-      input(type="checkbox",name="never")
-      label อุปสมบท     
-      label บัดนี้มีศรัทธาจะอุปสมบทในพระพุทธศาสนา ณ วัด
-      input(type="text",name="temple")
-      label ตั้งอยู่ ณ
-      input(type="text",name="addtem")
-      br
-      label หมายเลขโทรศัพท์
-      input(type="text",name="phnumber")
-      label กำหนดอุปสมบทวันที่
-      input(type="text",name="birthd2")
-      label เดือน
-      input(type="text",name="birthm2")
-      label พ.ศ.
-      input(type="text",name="birthb2")
-      label และจำพรรษาอยู่ ณ วัด
-      input(type="text",name="temple1")
-      br
-      label ตั้งอยู่ ณ
-      input(type="text",name="addtem1")
-      label จึงขอลาอุปสมบทตั้งแต่วันที่
-      input(type="text",name="birthd3")
-      label เดือน
-      input(type="text",name="birthm3")
-      label พ.ศ.
-      input(type="text",name="birthb3")
-      br
-      label ถึงวันที่
-      input(type="text",name="birthd4")
-      label เดือน
-      input(type="text",name="birthm4")
-      label พ.ศ.
-      input(type="text",name="birthb4")
-      label มีกำหนด
-      input(type="text",name="dtime")
-      label วัน
-      br
-      label (ลงชื่อ)
-      input(type="text",name="sign")
-      br
-      label (
-      input(type="text",name="signn1")
-      label )
-      br
-      label ความเห็นผู้บังคับบัญชา
-      br
-      input(type="text",name="comment")
-      br
-      label (ลงชื่อ)
-      input(type="text",name="sign2")
-      br
-      label (
-      input(type="text",name="signn2")
-      label )
-      br
-      label (ตำแหน่ง)
-      input(type="text",name="rank1")
-      br
-      lebel วันที่
-      input(type="date", name="date2")
-      br
-      label คำสั่ง
-      br
-      label อนุญาต
-      input(type="checkbox", name="correct")
-      label ไม่อนุญาต
-      input(type="checkbox", name="incorrect")
-      br
-      input(type="text", name="comment1")
-      br
-      label (ลงชื่อ)
-      input(type="text",name="sign3")
-      br
-      label (
-      input(type="text",name="signn3")
-      label )
-      br
-      label (ตำแหน่ง)
-      input(type="text",name="rank2")
-      br
-      lebel วันที่
-      input(type="date", name="date3")
-      br
-      input(type="submit",value='print')
+  div(class='profile')
+    table(align="center")
+      tr 
+      td 
+      td 
+      td เขียนที่
+        
+      tr 
+      td 
+      td 
+      td 
+        input(type="text" name="address")
+
+      tr 
+      td 
+      td 
+      td วันที่
+        
+      tr 
+      td 
+      td 
+      td 
+        input(type="date", name="date")
+
+      tr 
+      td เรื่อง ขอลาอุปสมบท
+      td 
+      td 
+      
+      tr 
+      td คำขั้นต้น
+      td 
+      td 
+
+      tr 
+      td 
+        input(type="text", name="title")
+      td 
+      td 
+
+      tr 
+      td ข้าพเจ้า
+      td ตำแหน่ง
+      td ระดับ
+
+
+      tr 
+      td 
+        input(type="box" name="firstname")
+        input(type="box" name="lastname")
+      td 
+        input(type="text")
+      td 
+        input(type="text")
+
+      tr 
+      td สังกัด
+      td เกิดเมื่อวันที่
+      td เข้ารับราชการวันที่
+
+      tr 
+      td 
+        input(type="text")
+      td 
+        input(type="text")
+      td 
+        input(type="text")
+

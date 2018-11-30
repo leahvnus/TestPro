@@ -27,9 +27,30 @@ table{
     border: 1px;
     border-color: black;
     width: 100%;
+    text-align: left;
 }
 input[type=text]{
-    width: 500px;
+    width: 400px;
+    height: 30px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 157, 217);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+}
+input[type=date]{
+    width: 400px;
+    height: 30px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 157, 217);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+}
+input[type=box]{
+    width: 200px;
     height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;
