@@ -36,7 +36,7 @@ router.post('/', function(req, res) {
     db.once('open', function() {
         console.log("Connection Successful!");
         //add data to db
-        var add = new adduser({ firtname: firstn, lastname: lastn, username: user, password: pass, email: email }, { versionKey: false })
+        var add = new adduser({ firstname: firstn, lastname: lastn, username: user, password: pass, email: email }, { versionKey: false })
         add.save(function(err, newOne) {
             if (err) return console.error(err);
         });

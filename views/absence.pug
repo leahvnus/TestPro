@@ -2,20 +2,21 @@ extends layout
 
 block content
   link(rel='stylesheet', href='/stylesheets/ab.css')
+  form(action='/absence', method='post')
   h1 แบบใบลาอุปสมบท
   div(class='profile')
     table(align="center")
+    for item in data
       tr 
       td 
       td 
       td เขียนที่
-        
+
       tr 
       td 
       td 
-      td 
-        input(type="text" name="address")
-
+      td #{item.firstname}
+        
       tr 
       td 
       td 
@@ -25,7 +26,7 @@ block content
       td 
       td 
       td 
-        input(type="date", name="date")
+        input(type="date" name="date")
 
       tr 
       td เรื่อง ขอลาอุปสมบท
@@ -70,4 +71,8 @@ block content
         input(type="text")
       td 
         input(type="text")
+      
+      tr
+        input(type="submit", value="send")
 
+      
