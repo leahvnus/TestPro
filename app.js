@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var profileRouter = require('./routes/profile');
 var absenceRouter = require('./routes/absence');
+var showdbRouter = require('./routes/showdb');
+var putRouter = require('./routes/put');
 
 var app = express();
 var mongoose = require('mongoose');
@@ -30,6 +32,8 @@ app.use('/users', usersRouter);
 app.use('/', loginRouter);
 app.use('/profile', profileRouter);
 app.use('/absence', absenceRouter);
+app.use('/showdb', showdbRouter);
+app.use('/put', putRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

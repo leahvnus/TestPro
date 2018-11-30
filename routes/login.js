@@ -14,13 +14,11 @@ router.get('/', function(req, res, next) {
 //res.render('respond', { username: req.body.username, password: req.body.password });
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-
 var memberSchema = new Schema({
     username: { type: String, unique: true },
     password: { type: String }
 }, { collection: 'myuser' });
 var member = mongoose.model('member', memberSchema);
-
 router.post('/', function(req, res) {
     var user = req.body.username;
     var pass = req.body.password;
@@ -30,10 +28,13 @@ router.post('/', function(req, res) {
     member.findOne({ username: user, password: pass }, 'username password', function(err, Member) {
         if (err) return handleError(err);
         if (Member == null) {
-            console.log("wrong username or password"), res.redirect('/')
+            console.log("wrong username or password") //, res.redirect('/')
+            var data1 = '<a href="/">Home</a>' + '<br/>' + ' ' + 'wrong username or password ';
+            res.send(data1);
         } else {
-            var data = '<a href="/">Home</a>' + '<br/>' + 'ยินดีต้อนรับ ' + user + ' ' + pass;
-            res.send(data);
+            //var data = '<a href="/">Home</a>' + '<br/>' + 'ยินดีต้อนรับ ' + user + ' ' + pass;
+            //res.send(data);
+            res.redirect('/profile')
         }
     });
 });
