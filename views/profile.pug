@@ -1,21 +1,61 @@
-extends layout
+doctype html
+html(lang='en')
+  head
+    title Profile
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/profile.css')
+  body
+    header
+      h4 Profile
+    section
+      nav
+        ul
+          li
+            a(href='#') ข้อมูลส่วนตัว
+          hr
+          li
+            a(href='#') การลา
+          hr
+          li
+            a(href='#') ข้อมูลการลา
+          hr
+          li
+            a(href='/') ออกจากระบบ
+          hr
+      article
+        h1 ข้อมูลส่วนตัว
+        table
+          tr
+            td(width='60%') คำนำหน้าชื่อ      
+            td(width='60%') ชื่อ - นามสกุล
+          tr
+            td(width='60%')
+              select(class="title" width='86%')
+                option(value='mr') นาย
+                option(value='mrs') นาง
+                option(value='miss') นางสาว
+                option(value='prof') ดร.   
+            td(width='60%')
+              input(type="text")
+          tr
+            td E-mail
+            td เบอร์โทรศัพท์
+          tr
+            td 
+              input(type="text")
+            td
+              input(type="tel", name="telephone")
+          tr
+            td ตำแหน่ง
+            td สังกัด
+          tr
+            td 
+              input(type="text")
+            td 
+              input(type="text")
+              
+        
+    footer
+      p กรณีศึกษาการพัฒนาระบบการลา
 
-block content
-  link(rel='stylesheet', href='/stylesheets/profile.css')
-  h1=title
-  div(class='profile')
-    table
-      tr 
-      td 
-        a(href) ข้อมูลส่วนตัว
-      td ชื่อ
-        input(type="text" name="firstname")
-      td นามสกุล
-        input(type="text" name="lastname")
-      tr
-      td 
-        a(href="/") ออกจากระบบ
-      td 4
-      tr
-      td 3
-      td 4

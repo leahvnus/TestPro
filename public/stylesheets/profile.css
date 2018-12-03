@@ -1,40 +1,78 @@
+* {
+    box-sizing: border-box;
+}
 body {
-    background-color: lightpink;
-    font-size: 20ยป;
-    font-family: "Times New Roman", Times, serif;
-}
-div.profile {
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    width: auto;
-    padding: 30px;
-    border: 5px solid rgb(255, 157, 217);
-    margin: auto;
-    height: auto;
-    border-radius: 30px;
-}
-h4 {
-    text-align: center;
-}
-
-a {
-    color: black;
-    /*border: 1px solid rgb(232, 240, 118);*/
-    font-size: 20px;
-    text-align: left;
-}
-table{
-    border: 1px;
-    border-color: black;
-    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 input[type=text]{
-    width: 500px;
-    height: 30px;
+    width: 300px;
+    height: 40px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid rgb(255, 157, 217);
+    border: 2px solid #464242ad;
     border-radius: 4px;
     background-color: #f8f8f8;
+    resize: none;
     margin-bottom: 10px;
+}
+input[type=tel]{
+    width: 300px;
+    height: 40px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #464242ad;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    margin-bottom: 10px;
+}
+/* Style the header */
+header {
+    background-color: #666;
+    padding: 1px;
+
+}
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+/* Style the navigation menu */
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 10px;
+}
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+/* Style the content */
+article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+}
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 400px) {
+section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
 }
