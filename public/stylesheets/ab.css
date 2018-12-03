@@ -64,25 +64,3 @@ input[type=box] {
     background-color: #f8f8f8;
     margin-bottom: 10px;
 }
-
-div.d1 {
-    text-align: right;
-    border: #522aad;
-}
-
-div.d2 {
-    text-align: unset;
-}
-
-div.dp {
-    text-align: center;
-}
-
-div.header {
-    text-align: center;
-    font-size: 25px;
-}
-
-div.sign {
-    text-align: center;
-}

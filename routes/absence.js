@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('absence', { title: 'ใบลา' });
+    res.render('absence', { title: 'ใบลาอุปสมบท' });
 });
 var ObjectID = require('mongodb').ObjectID;
 var ab1Schema = new Schema({
@@ -105,7 +105,7 @@ router.post('/', function(req, res) {
     db.once('open', function() {
         console.log("Connection Successful!");
         //add data to db
-        var add = new adduser({ ab1Schema: addab1 }, { versionKey: false })
+        var add = new ab1(addab1, { versionKey: false })
         add.save(function(err, newOne) {
             if (err) return console.error(err);
         });
@@ -126,7 +126,7 @@ router.get('/', function(req, res, next) {
                 return next(err);
             } else {
                 //res.json(showab);
-                res.render('absence', { title: 'ใบลา', data: showab })
+                res.render('absence', { title: '????', data: showab })
             }
         })
         // res.render('showdb', { title: 'ShowDB' });
