@@ -42,9 +42,8 @@ input[type=text] {
     background-color: #f8f8f8;
     margin-bottom: 10px;
 }
-
-input[type=date] {
-    width: 400px;
+input[type=date]{
+    width: auto;
     height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -54,9 +53,9 @@ input[type=date] {
     margin-bottom: 10px;
 }
 
-input[type=box] {
-    width: 200px;
-    height: 30px;
+input[type=box]{
+    width: auto;
+   height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid rgb(255, 157, 217);
