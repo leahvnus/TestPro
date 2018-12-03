@@ -4,14 +4,14 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /* Style the header */
 header {
     background-color: #666;
     padding: 1px;
-    text-align: center;
-    font-size: 20px;
-    color: white;
+
 }
+
 /* Container for flexboxes */
 section {
     display: -webkit-flex;
@@ -51,4 +51,20 @@ section {
     -webkit-flex-direction: column;
     flex-direction: column;
 }
+
+table {
+    border: 1px;
+    border-color: black;
+    width: 100%;
+}
+
+input[type=text] {
+    width: 500px;
+    height: 30px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 157, 217);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
 }
