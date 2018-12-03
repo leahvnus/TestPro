@@ -4,75 +4,118 @@ block content
   link(rel='stylesheet', href='/stylesheets/ab.css')
   form(action='/absence', method='post')
   h1 แบบใบลาอุปสมบท
-  div(class='profile')
-    table(align="center")
-    for item in data
-      tr 
-      td 
-      td 
-      td เขียนที่
-
-      tr 
-      td 
-      td 
-      td #{item.firstname}
-        
-      tr 
-      td 
-      td 
-      td วันที่
-        
-      tr 
-      td 
-      td 
-      td 
-        input(type="date" name="date")
-
-      tr 
-      td เรื่อง ขอลาอุปสมบท
-      td 
-      td 
-      
-      tr 
-      td คำขั้นต้น
-      td 
-      td 
-
-      tr 
-      td 
-        input(type="text", name="title")
-      td 
-      td 
-
-      tr 
-      td ข้าพเจ้า
-      td ตำแหน่ง
-      td ระดับ
-
-
-      tr 
-      td 
-        input(type="box" name="firstname")
-        input(type="box" name="lastname")
-      td 
-        input(type="text")
-      td 
-        input(type="text")
-
-      tr 
-      td สังกัด
-      td เกิดเมื่อวันที่
-      td เข้ารับราชการวันที่
-
-      tr 
-      td 
-        input(type="text")
-      td 
-        input(type="text")
-      td 
-        input(type="text")
-      
-      tr
-        input(type="submit", value="send")
-
-      
+  div(class='absence')
+    div(class='header')
+      tr แบบใบลาอุปสมบท   
+      br
+      br
+      br     
+    div(class='d1')
+      tr (เขียนที่) : 
+      input(type="text",name="write")
+      br
+      tr วันที่ 
+      input(type="date", name="date1")
+      br
+      br
+      br
+    div(class='dtt')
+      tr เรื่อง  ขอลาอุปสมบท
+      br
+      tr (คำขึ้นต้น)     
+      input(type="text",name="prologue")
+    div(class='d2')
+      tr ข้าพเจ้า    
+      input(type="text",name="me")
+      tr ตำแหน่ง      
+      input(type="text",name="rank")
+      br
+      tr ระดับ    
+      input(type="text",name="degree")
+      tr สังกัด     
+      input(type="text",name="affiliation")
+      br
+      tr เกิดวันที่     
+      input(type="date", name="date2")
+      tr เข้ารับราชการเมื่อวันที่       
+      input(type="date", name="date3")
+      br
+      tr ข้าพเจ้า   เคย          
+      input(type="checkbox",name="ever")
+      tr ไม่เคย            
+      input(type="checkbox",name="never")
+      tr อุปสมบท              
+      tr บัดนี้มีศรัทธาจะอุปสมบทในพระพุทธศาสนา ณ วัด                            
+      input(type="text",name="temple")
+      tr ตั้งอยู่ ณ                          
+      input(type="text",name="addtem")
+      pr
+      tr หมายเลขโทรศัพท์                     
+      input(type="text",name="phnumber")
+      tr กำหนดอุปสมบทวันที่              
+      input(type="date", name="date4")
+      tr และจำพรรษาอยู่ ณ วัด          
+      input(type="text",name="temple1")
+      br
+      tr ตั้งอยู่ ณ           
+      input(type="text",name="addtem1")
+      tr จึงขอลาอุปสมบทตั้งแต่วันที่               
+      input(type="text",name="birthd3")
+      tr เดือน                         
+      input(type="text",name="birthm3")
+      tr พ.ศ.                    
+      input(type="text",name="birthb3")
+      br
+      tr ถึงวันที่              
+      input(type="date", name="date5")
+      tr มีกำหนด                  
+      input(type="text",name="dtime")
+      tr วัน               
+    div(class='sign')
+      tr (ลงชื่อ)                
+      input(type="text",name="sign")
+      br
+      tr (              
+      input(type="text",name="signn1")
+      tr )               
+    div
+      tr ความเห็นผู้บังคับบัญชา                    
+      br
+      input(type="text",name="comment")
+    div(class='sign')
+      tr (ลงชื่อ)                      
+      input(type="text",name="sign2")
+      br
+      tr (          
+      input(type="text",name="signn2")
+      tr )           
+      br
+      tr (ตำแหน่ง)                    
+      input(type="text",name="rank1")
+      br
+      tr วันที่             
+      input(type="date", name="date2")
+    div
+      tr คำสั่ง                
+      br
+      tr อนุญาต            
+      input(type="checkbox", name="correct")
+      tr ไม่อนุญาต              
+      input(type="checkbox", name="incorrect")
+      br
+      input(type="text", name="comment1")
+    div(class='sign')
+      tr (ลงชื่อ)             
+      input(type="text",name="sign3")
+      br
+      tr (               
+      input(type="text",name="signn3")
+      tr )            
+      br
+      tr (ตำแหน่ง)             
+      input(type="text",name="rank2")
+      br
+      tr วันที่            
+      input(type="date", name="date6")
+    div(class='dp')
+      input(type="submit",value='print')

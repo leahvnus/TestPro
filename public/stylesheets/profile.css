@@ -3,6 +3,7 @@ body {
     font-size: 20ยป;
     font-family: "Times New Roman", Times, serif;
 }
+
 div.profile {
     background-color: rgb(255, 255, 255);
     text-align: center;
@@ -13,6 +14,7 @@ div.profile {
     height: auto;
     border-radius: 30px;
 }
+
 h4 {
     text-align: center;
 }
@@ -23,12 +25,14 @@ a {
     font-size: 20px;
     text-align: left;
 }
-table{
+
+table {
     border: 1px;
     border-color: black;
     width: 100%;
 }
-input[type=text]{
+
+input[type=text] {
     width: 500px;
     height: 30px;
     padding: 12px 20px;
