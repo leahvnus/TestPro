@@ -3,9 +3,9 @@ body {
     font-size: 20ยป;
     font-family: "Times New Roman", Times, serif;
 }
-div.profile {
+
+div.absence {
     background-color: rgb(255, 255, 255);
-    text-align: center;
     width: auto;
     padding: 30px;
     border: 5px solid rgb(255, 157, 217);
@@ -13,6 +13,7 @@ div.profile {
     height: auto;
     border-radius: 30px;
 }
+
 h4 {
     text-align: center;
 }
@@ -23,14 +24,16 @@ a {
     font-size: 20px;
     text-align: left;
 }
-table{
+
+table {
     border: 1px;
     border-color: black;
     width: 100%;
     text-align: left;
 }
-input[type=text]{
-    width: auto;
+
+input[type=text] {
+    width: 400px;
     height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -49,13 +52,36 @@ input[type=date]{
     background-color: #f8f8f8;
     margin-bottom: 10px;
 }
+
 input[type=box]{
     width: auto;
-    height: 30px;
+   height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid rgb(255, 157, 217);
     border-radius: 4px;
     background-color: #f8f8f8;
     margin-bottom: 10px;
+}
+
+div.d1 {
+    text-align: right;
+    border: #522aad;
+}
+
+div.d2 {
+    text-align: unset;
+}
+
+div.dp {
+    text-align: center;
+}
+
+div.header {
+    text-align: center;
+    font-size: 25px;
+}
+
+div.sign {
+    text-align: center;
 }
