@@ -1,10 +1,10 @@
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: rgb(255, 255, 255);
-    
+    background-color: rgb(255, 255, 255); 
     /*border: solid thick rgb(5, 5, 5);*/
     /*border-radius: 1em;*/
+    background-image: url(../public/images/bg1.jpg);
 }
 
 h1 {

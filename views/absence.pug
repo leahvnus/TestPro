@@ -3,8 +3,10 @@ extends layout
 block content
   link(rel='stylesheet', href='/stylesheets/ab.css')
   h1 แบบใบลาอุปสมบท
+  form(action='/absence')
   div(class='profile')
     table(align="center")
+    for item in data
       tr 
       td 
       td 
@@ -13,8 +15,7 @@ block content
       tr 
       td 
       td 
-      td 
-        input(type="text" name="address")
+      td #{item.address}
 
       tr 
       td 
@@ -38,8 +39,7 @@ block content
       td 
 
       tr 
-      td 
-        input(type="text", name="title")
+      td #{item.title}
       td 
       td 
 
@@ -50,13 +50,9 @@ block content
 
 
       tr 
-      td 
-        input(type="box" name="firstname")
-        input(type="box" name="lastname")
-      td 
-        input(type="text")
-      td 
-        input(type="text")
+      td #{item.firstname},#{item.lastname}
+      td #{item.position}
+      td #{utem.level}
 
       tr 
       td สังกัด
@@ -70,4 +66,21 @@ block content
         input(type="text")
       td 
         input(type="text")
+
+      tr 
+      td ข้าพเจ้า
+      td อุปสมบท บัดนี้มีความศรัทธา
+      td 
+
+      tr 
+      td 
+        input(type="checkbox", name="no") 
+        label ยังไม่เคย
+        input(type="checkbox", name="yes") 
+        label เคย
+      td อุปสมบท บัดนี้มีความศรัทธาจะอุปสมบทในพระพุทธศ
+      td 
+      
+      
+      
 

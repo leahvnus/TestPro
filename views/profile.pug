@@ -1,21 +1,25 @@
-extends layout
-
-block content
-  link(rel='stylesheet', href='/stylesheets/profile.css')
-  h1=title
-  div(class='profile')
-    table
-      tr 
-      td 
-        a(href) ข้อมูลส่วนตัว
-      td ชื่อ
-        input(type="text" name="firstname")
-      td นามสกุล
-        input(type="text" name="lastname")
-      tr
-      td 
-        a(href="/") ออกจากระบบ
-      td 4
-      tr
-      td 3
-      td 4
+doctype html
+html(lang='en')
+  head
+    title Profile
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/profile.css')
+  body
+    header
+      h4 Profile
+    section
+      nav
+        ul
+          li
+            a(href='#') ข้อมูลส่วนตัว
+          li
+            a(href='#') การลา
+          li
+            a(href='#') ข้อมูลการลา
+          li
+            a(href='/') ออกจากระบบ
+      article
+        h1 ข้อมูลส่วนตัว
+    footer
+      p Footer

@@ -30,7 +30,7 @@ table{
     text-align: left;
 }
 input[type=text]{
-    width: 400px;
+    width: auto;
     height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -40,7 +40,7 @@ input[type=text]{
     margin-bottom: 10px;
 }
 input[type=date]{
-    width: 400px;
+    width: auto;
     height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -50,7 +50,7 @@ input[type=date]{
     margin-bottom: 10px;
 }
 input[type=box]{
-    width: 200px;
+    width: auto;
     height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;
