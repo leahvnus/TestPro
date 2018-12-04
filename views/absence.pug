@@ -3,65 +3,70 @@ extends layout
 block content
   link(rel='stylesheet', href='/stylesheets/ab.css')
   form(action='/absence', method='post')
-    
+  
     div(class='absence')
-      h2 แบบใบลาอุปสมบท 
-        br
-        br
-        br
-      td(align="right") เขียนที่    
-        input(type="text", name="write" placeholder="เขียนที่" ,align="right") 
-        br
-      td วันที่  
-        input(type="date", name="date1")
-        br
-      td เรื่อง  ขอลาอุปสมบท
-        br
-      td (คำขึ้นต้น)
-        input(type="text", name="title" placeholder="นาย / นาง / นางสาว")
-        br
-      td ข้าพเจ้า
-        input(type="text", name="firstname" placeholder="ชื่อ")
-        input(type="text", name="lastname" placeholder="นามสกุล")
-      td ตำแหน่ง   
-        input(type="text", name="prologue" placeholder="ตำแหน่ง")
-        br
-      td ระดับ
-        input(type="text", name="rank" placeholder="ระดับ")
-      td สังกัด   
-        input(type="text", name="degree" placeholder="สังกัด")
-        br
-      td เกิดวันที่
-        input(type="date", name="date2")
-      td เข้ารับราชการเมื่อวันที่   
-        input(type="date", name="date3")
-      td ข้าพเจ้า 
-        input(type="checkbox", name="yes") 
-      td ยังไม่เคย    
-        input(type="checkbox", name="no")
-      td เคย   อุปสมบท    
-      td บัดนี้มีศรัทธาจะอุปสมบทในพระพุทธศาสนา ณ วัด    
-        input(type="text", name="tem1")
-      td ตั้งอยู่ ณ    
-        input(type="text", name="place1")
-        br
-      td หมายเลขโทรศัพท์
-        input(type="tel", name="phone")
-      td กำหนดอุปสมบทวันที่
-        input(type="date", name="date4")
-        br
-      td และจะจำพรรษาอยู่ ณ วัด
-        input(type="text", name="tem2")
-        br
-      td ตั้งอยู่ ณ  
-        input(type="text", name="place2")
-      td จึงขออนุญาติลาอุปสมบทตั้งแต่วันที่   
-        br
-        input(type="date", name="date5")
-      td ถึงวันที่  
-        input(type="date", name="date6")
-      td มีกำหนด  
-        input(type="text", name="day1")
-      td    วัน   
-        br
-        input(type='submit', value='send')
+      h4 ใบลาอุปสมบท
+        table(align="center")
+          tr 
+          td(align='right') เขียนที่
+            input(type="text", name="write" placeholder="เขียนที่" ,align="right") 
+          tr 
+          td(align='right') วันที่ 
+            input(type="date", name="date1")
+          tr
+          td เรื่อง  ขอลาอุปสมบท
+          
+          tr  
+          td (คำขึ้นต้น)
+            input(type="text", name="title" placeholder="นาย / นาง / นางสาว")
+          
+          tr
+          td  !{'  '}ข้าพเจ้า
+            input(type="text", name="firstname" placeholder="ชื่อ")
+            |!{' '}
+            input(type="text", name="lastname" placeholder="นามสกุล")
+            |!{' '} ตำแหน่ง
+            input(type="text", name="prologue" placeholder="ตำแหน่ง")
+          tr
+          td ระดับ
+            input(type="text", name="rank" placeholder="ระดับ")
+            |!{' '} สังกัด   
+            input(type="text", name="degree" placeholder="สังกัด")
+          tr
+          td เกิดวันที่
+            input(type="date", name="date2")
+            |!{' '} เข้ารับราชการเมื่อวันที่   
+            input(type="date", name="date3")
+          tr
+          td ข้าพเจ้า 
+            input(type="checkbox", name="yes") 
+            |!{' '} ยังไม่เคย    
+            input(type="checkbox", name="no")
+            |!{' '} เคย   อุปสมบท    
+            |!{' '} บัดนี้มีศรัทธาจะอุปสมบทในพระพุทธศาสนา 
+          tr
+          td ณ วัด    
+            input(type="text", name="tem1")
+            |!{' '} ตั้งอยู่ ณ    
+            input(type="text", name="place1")
+          tr
+          td หมายเลขโทรศัพท์
+            input(type="tel", name="phone")
+            |!{' '} กำหนดอุปสมบทวันที่
+            input(type="date", name="date4")
+          tr
+          td และจะจำพรรษาอยู่ ณ วัด
+            input(type="text", name="tem2")
+          tr
+          td ตั้งอยู่ ณ  
+            input(type="text", name="place2")
+            |!{' '} จึงขออนุญาติลาอุปสมบทตั้งแต่วันที่   
+            input(type="date", name="date5")
+            |!{' '} ถึงวันที่  
+            input(type="date", name="date6")
+            |!{' '} มีกำหนด  
+            input(type="text", name="day1")
+            |!{' '} วัน   
+          tr
+          td(align='center')
+            input(type='submit', value='send', align='center')
