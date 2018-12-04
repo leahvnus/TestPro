@@ -2,10 +2,10 @@ extends layout
 
 block content
   link(rel='stylesheet', href='/stylesheets/ab.css')
-  form(action='/holiday', method='post')
+  form(action='/wife', method='post')
   
     div(class='absence')
-      h4 ใบลาพักผ่อน
+      h4 ใบลาไปช่วยเหลือภริยาที่คลอดบุตร
         table(align="center")
           tr 
           td(align='right') เขียนที่
@@ -14,7 +14,7 @@ block content
           td(align='right') วันที่ 
             input(type="date", name="date1")
           tr
-          td เรื่อง  ขอลาพักผ่อน
+          td เรื่อง ขอลาไปช่วยเหลือภริยาที่คลอดบุตร
           
           tr  
           td (คำขึ้นต้น)
@@ -33,21 +33,21 @@ block content
             |!{' '} สังกัด   
             input(type="text", name="degree" placeholder="สังกัด")
           tr
-          td มีวันลาพักผ่อนสะสม
-            input(type='number', name="number1")
-            |!{' '} วันทำการ มีสิทธิลาพักผ่อนประจำปีนี้อีก   
-            input(type='number', name="number2")
-            |!{' '} วันทำการ รวมเป็น
-            input(type='number', name="number3")
-            |!{' '} วันทำการ
+          td มีความประสงค์ลาไปช่วยเหลือภริยาโดยชอบด้วยกฏหมายชื่อ
+            input(type='text', name="name1" placeholder='ชื่อภริยา')
+            
           tr
-          td ขอลาพักผ่อนตั้งแต่วันที่ 
+          td ซึ่งคลอดบุตรเมื่อวันที่
             input(type="date", name="date5")
-            |!{' '} ถึงวันที่  
+            |!{' '} จึงขออนุญาตลาไปช่วยเหลือภริยาที่คลอดบุตรตั้งแต่
+          tr
+          td วันที่
             input(type="date", name="date6")
-            |!{' '} มีกำหนด    
+            |!{' '} ถึงวันที่   
+            input(type="date", name="date7")
+            |!{' '} มีกำหนด
             input(type="text", name="day1")
-            |!{' '} วัน    
+            |!{' '} วันทำการ   
           tr
           td ในระหว่างลาจะติดต่อข้าพเจ้าได้ที่       
             input(type="text", name="place1")
