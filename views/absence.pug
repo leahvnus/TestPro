@@ -1,27 +1,67 @@
-
 extends layout
 
 block content
+  link(rel='stylesheet', href='/stylesheets/ab.css')
   form(action='/absence', method='post')
     
     div(class='absence')
       h2 แบบใบลาอุปสมบท 
-      br
-      td เขียนที่    
-      input(type="text", name="write" placeholder="เขียนที่" ) 
-      br
+        br
+        br
+        br
+      td(align="right") เขียนที่    
+        input(type="text", name="write" placeholder="เขียนที่" ,align="right") 
+        br
       td วันที่  
-      input(type="date", name="date1")
-      br
+        input(type="date", name="date1")
+        br
       td เรื่อง  ขอลาอุปสมบท
-      br
+        br
       td (คำขึ้นต้น)
-      input(type="text", name="title" placeholder="นาย / นาง / นางสาว")
-      br
+        input(type="text", name="title" placeholder="นาย / นาง / นางสาว")
+        br
       td ข้าพเจ้า
-      input(type="text", name="firstname" placeholder="ชื่อ")
-      input(type="text", name="lastname" placeholder="นามสกุล")
-      br
-      input(type="email", name="email" placeholder="your e-mail")
-      br
-      input(type='submit', value='Register')
+        input(type="text", name="firstname" placeholder="ชื่อ")
+        input(type="text", name="lastname" placeholder="นามสกุล")
+      td ตำแหน่ง   
+        input(type="text", name="prologue" placeholder="ตำแหน่ง")
+        br
+      td ระดับ
+        input(type="text", name="rank" placeholder="ระดับ")
+      td สังกัด   
+        input(type="text", name="degree" placeholder="สังกัด")
+        br
+      td เกิดวันที่
+        input(type="date", name="date2")
+      td เข้ารับราชการเมื่อวันที่   
+        input(type="date", name="date3")
+      td ข้าพเจ้า 
+        input(type="checkbox", name="yes") 
+      td ยังไม่เคย    
+        input(type="checkbox", name="no")
+      td เคย   อุปสมบท    
+      td บัดนี้มีศรัทธาจะอุปสมบทในพระพุทธศาสนา ณ วัด    
+        input(type="text", name="tem1")
+      td ตั้งอยู่ ณ    
+        input(type="text", name="place1")
+        br
+      td หมายเลขโทรศัพท์
+        input(type="tel", name="phone")
+      td กำหนดอุปสมบทวันที่
+        input(type="date", name="date4")
+        br
+      td และจะจำพรรษาอยู่ ณ วัด
+        input(type="text", name="tem2")
+        br
+      td ตั้งอยู่ ณ  
+        input(type="text", name="place2")
+      td จึงขออนุญาติลาอุปสมบทตั้งแต่วันที่   
+        br
+        input(type="date", name="date5")
+      td ถึงวันที่  
+        input(type="date", name="date6")
+      td มีกำหนด  
+        input(type="text", name="day1")
+      td    วัน   
+        br
+        input(type='submit', value='send')

@@ -2,23 +2,10 @@ extends layout
 
 block content
   h1 ShowDB
-  table(border = 1)
-    br
-    th ชื่อ 
-    br
-    th นามสกุล
-    br
-    th username
-    br
-    th password
-    br
-    th password
-    br
-    th email
+  table()
     for item in data
-        tr
-            td #{item.firstname}
-            td #{item.lastname}
-            td #{item.username}
-            td #{item.password}
-            td #{item.email}
+      tr(hight="100")
+        td(align="right") ชื่อ
+        td(align="right") #{item="0".firstname}
+      tr
+    

@@ -1,6 +1,6 @@
 body {
-    background-color: lightpink;
-    font-size: 20ยป;
+    background-color: rgb(172, 166, 166);
+    font-size: 20px;
     font-family: "Times New Roman", Times, serif;
 }
 
@@ -8,10 +8,10 @@ div.absence {
     background-color: rgb(255, 255, 255);
     width: auto;
     padding: 30px;
-    border: 5px solid rgb(255, 157, 217);
+    border: 5px solid rgb(17, 15, 16);
     margin: auto;
     height: auto;
-    border-radius: 30px;
+    border-radius: 14px;
 }
 
 h4 {
@@ -22,7 +22,7 @@ a {
     color: black;
     /*border: 1px solid rgb(232, 240, 118);*/
     font-size: 20px;
-    text-align: left;
+    /*text-align: left;*/
 }
 
 table {
@@ -33,33 +33,66 @@ table {
 }
 
 input[type=text] {
-    width: 400px;
-    height: 30px;
+    width: 300px;
+    height: auto;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid rgb(255, 157, 217);
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    margin-bottom: 10px;
-}
-input[type=date]{
-    width: auto;
-    height: 30px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid rgb(255, 157, 217);
+    border: 2px solid rgb(82, 78, 80);
     border-radius: 4px;
     background-color: #f8f8f8;
     margin-bottom: 10px;
 }
 
-input[type=box]{
+input[type=date] {
     width: auto;
-   height: 30px;
+    height: auto;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid rgb(255, 157, 217);
+    border: 2px solid rgb(73, 68, 71);
     border-radius: 4px;
     background-color: #f8f8f8;
     margin-bottom: 10px;
+}
+
+input[type=box] {
+    width: auto;
+    height: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(66, 64, 66);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+}
+
+input[type=submit] {
+    width: auto;
+    height: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(66, 64, 66);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input[type=tel] {
+    width: auto;
+    height: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(66, 64, 66);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+td.aaa {
+    text-align: right;
 }
