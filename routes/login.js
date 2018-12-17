@@ -3,7 +3,7 @@ var router = express.Router();
 var bodyParser = require('body-Parser');
 var jsonParser = bodyParser.json();
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
-//var membermodel = require('../models/myuser');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('login', { title: 'Login' });
@@ -32,8 +32,7 @@ router.post('/', function(req, res) {
             var data1 = '<a href="/">Home</a>' + '<br/>' + ' ' + 'wrong username or password ';
             res.send(data1);
         } else {
-            //var data = '<a href="/">Home</a>' + '<br/>' + 'ยินดีต้อนรับ ' + user + ' ' + pass;
-            //res.send(data);
+
             res.redirect('/profile')
         }
     });

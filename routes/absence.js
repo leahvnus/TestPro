@@ -13,44 +13,36 @@ var ObjectID = require('mongodb').ObjectID;
 var ab1Schema = new Schema({
     write: { type: String },
     date1: { type: String },
+    title: { type: String },
+    firstname: { type: String },
+    lastname: { type: String },
     prologue: { type: String },
-    me: { type: String },
     rank: { type: String },
     degree: { type: String },
-    affiliation: { type: String },
-    birthd: { type: String },
-    birthm: { type: String },
-    birthb: { type: String },
-    birthd1: { type: String },
-    birthm1: { type: String },
-    birthb1: { type: String },
-    temple: { type: String },
-    addtem: { type: String },
-    phnumber: { type: String },
-    birthd2: { type: String },
-    birthm2: { type: String },
-    birthb2: { type: String },
-    temple1: { type: String },
-    addtem1: { type: String },
-    birthd3: { type: String },
-    birthm3: { type: String },
-    birthb3: { type: String },
-    birthd4: { type: String },
-    birthm4: { type: String },
-    birthb4: { type: String },
-    dtime: { type: String },
+    date2: { type: String },
+    date3: { type: String },
+    yes: { type: String },
+    no: { type: String },
+    temp1: { type: String },
+    place1: { type: String },
+    phone: { type: String },
+    date4: { type: String },
+    place2: { type: String },
+    date5: { type: String },
+    date6: { type: String },
+    day1: { type: String },
     sign: { type: String },
     signn1: { type: String },
     comment: { type: String },
     sign2: { type: String },
     signn2: { type: String },
     rank1: { type: String },
-    date2: { type: String },
+    date7: { type: String },
     comment1: { type: String },
     sign3: { type: String },
     signn3: { type: String },
     rank2: { type: String },
-    date3: { type: String }
+    date8: { type: String }
 }, { collection: 'ab1' });
 
 var ab1 = mongoose.model('ab1', ab1Schema);
@@ -111,6 +103,7 @@ router.post('/', function(req, res) {
         });
     });
 });
+module.exports = router;
 /*var ab1Schema = new Schema({
     address: { type: String },
     date: { type: String },
@@ -151,4 +144,3 @@ router.get('/', function(req, res, next) {
         });
     });
 });*/
-module.exports = router;
