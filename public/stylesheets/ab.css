@@ -34,7 +34,7 @@ table {
 
 input[type=text] {
     width: 300px;
-    height: auto;
+    height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid rgb(82, 78, 80);
@@ -44,8 +44,8 @@ input[type=text] {
 }
 
 input[type=date] {
-    width: auto;
-    height: auto;
+    width: 200px;
+    height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid rgb(73, 68, 71);
@@ -79,7 +79,7 @@ input[type=submit] {
 
 input[type=tel] {
     width: auto;
-    height: auto;
+    height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid rgb(66, 64, 66);

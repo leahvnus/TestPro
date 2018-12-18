@@ -10,6 +10,8 @@ var loginRouter = require('./routes/login');
 var profileRouter = require('./routes/profile');
 var absenceRouter = require('./routes/absence');
 var showdbRouter = require('./routes/showdb');
+var holidayRouter = require('./routes/holiday');
+var wifeRouter = require('./routes/wife');
 //var putRouter = require('./routes/put');
 
 var app = express();
@@ -33,6 +35,8 @@ app.use('/', loginRouter);
 app.use('/profile', profileRouter);
 app.use('/absence', absenceRouter);
 app.use('/showdb', showdbRouter);
+app.use('/holiday',holidayRouter);
+app.use('/wife', wifeRouter);
 //app.use('/put', putRouter);
 
 // catch 404 and forward to error handler

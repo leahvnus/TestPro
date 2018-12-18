@@ -5,7 +5,7 @@ block content
   form(action='/absence', method='post')
   
     div(class='absence')
-      h4 ใบลาอุปสมบท
+      h4=title
         table(align="center")
           tr 
           td(align='right') เขียนที่
@@ -18,7 +18,7 @@ block content
           
           tr  
           td (คำขึ้นต้น)
-            input(type="text", name="title" placeholder="นาย / นาง / นางสาว")
+            input(type="text", name="title" placeholder="เรียนผ้บังคับบัญชา")
           
           tr
           td  !{'  '}ข้าพเจ้า
@@ -32,13 +32,12 @@ block content
             input(type="text", name="rank" placeholder="ระดับ")
             |!{' '} สังกัด   
             input(type="text", name="degree" placeholder="สังกัด")
-          tr
-          td เกิดวันที่
+            |!{' '} เกิดวันที่
             input(type="date", name="date2")
-            |!{' '} เข้ารับราชการเมื่อวันที่   
-            input(type="date", name="date3")
           tr
-          td ข้าพเจ้า 
+          td เข้ารับราชการเมื่อวันที่   
+            input(type="date", name="date3")
+            |!{' '} ข้าพเจ้า 
             input(type="checkbox", name="yes") 
             |!{' '} ยังไม่เคย    
             input(type="checkbox", name="no")
@@ -49,13 +48,12 @@ block content
             input(type="text", name="tem1")
             |!{' '} ตั้งอยู่ ณ    
             input(type="text", name="place1")
-          tr
-          td หมายเลขโทรศัพท์
+            |!{' '} หมายเลขโทรศัพท์
             input(type="tel", name="phone")
-            |!{' '} กำหนดอุปสมบทวันที่
-            input(type="date", name="date4")
           tr
-          td และจะจำพรรษาอยู่ ณ วัด
+          td กำหนดอุปสมบทวันที่
+            input(type="date", name="date4")
+            |!{' '} และจะจำพรรษาอยู่ ณ วัด
             input(type="text", name="tem2")
           tr
           td ตั้งอยู่ ณ  
@@ -64,7 +62,8 @@ block content
             input(type="date", name="date5")
             |!{' '} ถึงวันที่  
             input(type="date", name="date6")
-            |!{' '} มีกำหนด  
+          tr
+          td มีกำหนด  
             input(type="text", name="day1")
             |!{' '} วัน   
           tr
