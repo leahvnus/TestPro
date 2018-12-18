@@ -1,7 +1,7 @@
 doctype html
 html(lang='en')
   head
-    title Profile
+    title การลา
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/stylesheets/profile.css')
@@ -12,7 +12,7 @@ html(lang='en')
       nav
         ul
           li
-            a(href='/profile') ข้อมูลส่วนตัว
+            a(href='#') ข้อมูลส่วนตัว
           hr
           li
             a(href='/leave') การลา
@@ -30,32 +30,13 @@ html(lang='en')
         h1 ข้อมูลส่วนตัว
         table
           tr
-            td(width='60%') คำนำหน้าชื่อ      
-            td(width='60%') ชื่อ - นามสกุล
+          td
+            a(href='/absence') ขอลาอุปสมบท
           tr
-            td(width='60%')
-              select(class="title" width='86%')
-                option(value='mr') นาย
-                option(value='mrs') นาง
-                option(value='miss') นางสาว
-                option(value='prof') ดร.   
-            td(width='60%')
-              input(type="text")
+          td
+            a(href='/wife') ลาไปช่วยเหลือภริยาที่คลอดบุตร
           tr
-            td E-mail
-            td เบอร์โทรศัพท์
-          tr
-            td 
-              input(type="text")
-            td
-              input(type="tel", name="telephone")
-          tr
-            td ตำแหน่ง
-            td สังกัด
-          tr
-            td 
-              input(type="text")
-            td 
-              input(type="text")
+          td
+            a(href='/holiday') ลาพักผ่อน
     footer
       p ลิขสิทธิ์ : คณะครุศาสตร์อุตสาหกรรม สาขาวิชาครุศาสตร์วิศวกรรม

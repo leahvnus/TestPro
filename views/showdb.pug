@@ -14,8 +14,10 @@ block content
     br
     th email
     for item in data
-      tr(hight="100")
-        td(align="right") ชื่อ
-        td(align="right") #{item.firstname}
       tr
+        td(align="right") #{item.firstname}
+        td(align="right") #{item.lastname}
+        td(align="right") #{item.username}
+        td(align="right") #{item.password}
+        td(align="right") #{item.email}
     
