@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  h1 ใบลา
+    br
+    th(align="right") เขียนที่
+    br
+    th วันที่
+    br
+    th คำขึ้นต้น
+    br
+    th ข้าพเจ้าชื่อ
+    br
+    th นามสกุล
+    br
+    th ตำแหน่ง
+    br
+    th ระดับ
+    br
+    th สังกัด
+    for item in data
+        tr
+            td #{item.write}
+            td #{item.date1}
+            td #{item.title}
+            td #{item.firstname}
+            td #{item.lastname}
+            td #{item.prologue}
+            td #{item.rank}
+            td #{item.degree}
+            td #{item.date2}
+            td #{item.date3}
+            td #{item.yes}
+            td #{item.no}
+            td #{item.temp1}
+            td #{item.place1}
+            td #{item.phone}
+            td #{item.date4}
+            td #{item.place2}
+            td #{item.date5}
+            td #{item.date6}
+            td #{item.day1}
+            td #{item.sign}
+            td #{item.signn1}
+            td #{item.comment}
+            td #{item.sign2}
+            td #{item.signn2}
+            td #{item.rank1}
+            td #{item.date7}
+            td #{item.comment1}
+            td #{item.sign3}
+            td #{item.signn3}
+            td #{item.rank2}
+            td #{item.date8}
