@@ -1,6 +1,6 @@
 body {
     background-color: rgb(172, 166, 166);
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Times New Roman", Times, serif;
 }
 
@@ -24,6 +24,11 @@ a {
     font-size: 20px;
     /*text-align: left;*/
 }
+header {
+    background-color: #666;
+    padding: 1px;
+
+}
 
 table {
     border: 1px;
@@ -42,7 +47,16 @@ input[type=text] {
     background-color: #f8f8f8;
     margin-bottom: 10px;
 }
-
+input[type=text1] {
+    width: 100px;
+    height: 30px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(82, 78, 80);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+}
 input[type=date] {
     width: 200px;
     height: 30px;

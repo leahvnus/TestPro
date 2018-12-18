@@ -1,0 +1,108 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/ab.css')
+  body
+  header
+      h4(align='center') กรณีศึกษาการพัฒนาระบบการลาออนไลน์ 
+  form(action='/love', method='post')
+    div(class='absence')
+      h4 ใบลาติดตามคู่สมรส
+        table(align="center")
+          tr 
+          td(align='right') เขียนที่
+            input(type="text", name="write" placeholder="เขียนที่" ,align="right") 
+          tr 
+          td(align='right') วันที่ 
+            input(type="date", name="date1")
+          tr
+          td เรื่อง ขอลาไปช่วยเหลือภริยาที่คลอดบุตร
+          
+          tr  
+          td (คำขึ้นต้น)
+            input(type="text", name="title" placeholder="เรียนผ้บังคับบัญชา")
+          
+          tr
+          td  !{'  '}ข้าพเจ้า
+            input(type="text", name="firstname" placeholder="ชื่อ")
+            |!{' '}
+            input(type="text", name="lastname" placeholder="นามสกุล")
+            |!{' '} ตำแหน่ง
+            input(type="text", name="prologue" placeholder="ตำแหน่ง")
+          tr
+          td ระดับ
+            input(type="text", name="rank" placeholder="ระดับ")
+            |!{' '} สังกัด   
+            input(type="text", name="degree" placeholder="สังกัด")
+          tr
+          td  !{'  '}ได้รับเงินเดือนเดือนละ
+            input(type="text", name="salary" placeholder="เงินเดือน")
+            |!{' '}
+            input(type="text", name=" " placeholder="เขียนจํานวนเงินเป็นตัวหนังสือ")
+          tr
+          td มีความประสงค์ขอลาติดตามคู่สมรส ชื่อ
+            input(type='text', name="name1" placeholder='ชื่อคู่สมรส')
+          tr
+          td ตำแหน่ง
+            input(type="text", name="prologue1" placeholder="ตำแหน่ง")
+            |!{' '}ระดับ
+            input(type="text", name="rank1" placeholder="ระดับ")
+            |!{' '} สังกัด   
+            input(type="text", name="degree1" placeholder="สังกัด")
+          tr
+          td ซึ่งไปปฏิบัติราชการ/ปฏิบัติงาน ณ ประเภศ
+            input(type="text", name="contry" placeholder="ชื่อประเทศ")
+          tr
+          td มีกำหนด 
+            input(type="text1", name="year")
+            |!{' '} ปี 
+            input(type="text1", name="year")
+            |!{' '} เดือน
+            input(type="text1", name="year")
+            |!{' '} วัน 
+            |!{' '} จึงขออนุญาติลาติดตามคู่สมรสมีกำหนด 
+            |!{' '} 
+            input(type="text1", name="year")
+            |!{' '} ปี 
+            input(type="text1", name="mount")
+            |!{' '} เดือน
+            input(type="text1", name="day5")
+            |!{' '} วัน
+          tr
+          td ตั้งแต่วันที่
+            input(type="date", name="date6")
+            |!{' '} ถึงวันที่   
+            input(type="date", name="date7")
+          tr
+          td ในระหว่างลาจะติดต่อข้าพเจ้าได้ที่       
+            input(type="text", name="place1")
+            |!{' '} หมายเลขโทรศัพท์
+            input(type="tel", name="phone")
+
+          tr
+          td ครั้งสุดท้ายข้าพเ้าได้ลาติดตามคู่สมรสไปประเทศ       
+            input(type="text", name="contry1" placeholder="ชื่อประเทศ")
+          tr
+          td เป็นเวลา
+            input(type="text1", name="year1")
+            |!{' '} ปี 
+            input(type="text1", name="mount1")
+            |!{' '} เดือน
+            input(type="text1", name="day6")
+            |!{' '} วัน เมื่อวันที่
+            input(type="date", name="date5")
+            |!{' '} ถึงวันที่
+            input(type="date", name="date6")
+          tr
+          td ในกรณีลาติดต่อกับครั้งก่อน รวมทั้งครั้งนี้ด้วย เป็นเวลา 
+            input(type="text1", name="year2")
+            |!{' '} ปี 
+            input(type="text1", name="mount2")
+            |!{' '} เดือน
+            input(type="text1", name="day7")
+            |!{' '} วัน
+          tr
+          td(align='left')
+            a(href='/leave') ย้อนกลับ
+          td(align='center')
+            input(type='submit', value='send', align='center')

@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1 ShowDB
-  table(border = 1)
+  table(border = 1, align='center')
     br
     th ชื่อ 
     br
@@ -15,9 +15,9 @@ block content
     th email
     for item in data
       tr
-        td(align="right") #{item.firstname}
-        td(align="right") #{item.lastname}
-        td(align="right") #{item.username}
-        td(align="right") #{item.password}
-        td(align="right") #{item.email}
+        td(align="left") #{item.firstname}
+        td(align="left") #{item.lastname}
+        td(align="left") #{item.username}
+        td(align="left") #{item.password}
+        td(align="left") #{item.email}
     
