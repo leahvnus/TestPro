@@ -30,8 +30,6 @@ var loveSchema = new Schema({
     day1: { type: String },
     date2: { type: String },
     date3: { type: String },
-    place: { type: String },
-    phone: { type: String },
     country1: { type: String },
     year2: { type: String },
     mount2: { type: String },
