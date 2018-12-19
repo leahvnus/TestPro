@@ -1,6 +1,6 @@
 body {
     background-color: rgb(172, 166, 166);
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Times New Roman", Times, serif;
 }
 
@@ -11,7 +11,7 @@ div.absence {
     border: 5px solid rgb(17, 15, 16);
     margin: auto;
     height: auto;
-    border-radius: 14px;
+    /*border-radius: 14px;*/
     padding-top: 30px;
 }
 
@@ -40,6 +40,16 @@ table {
 
 input[type=text] {
     width: 300px;
+    height: 30px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(82, 78, 80);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+}
+input[type=number] {
+    width: 100px;
     height: 30px;
     padding: 12px 20px;
     box-sizing: border-box;

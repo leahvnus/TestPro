@@ -2,59 +2,63 @@ extends layout
 
 block content
   link(rel='stylesheet', href='/stylesheets/ab.css')
-  form(action='/wife', method='post')
-  
-    div(class='absence')
-      h4 ใบลาไปช่วยเหลือภริยาที่คลอดบุตร
-        table(align="center")
-          tr 
-          td(align='right') เขียนที่
-            input(type="text", name="write" placeholder="เขียนที่" ,align="right") 
-          tr 
-          td(align='right') วันที่ 
-            input(type="date", name="date1")
-          tr
-          td เรื่อง ขอลาไปช่วยเหลือภริยาที่คลอดบุตร
-          
-          tr  
-          td (คำขึ้นต้น)
-            input(type="text", name="title" placeholder="เรียนผ้บังคับบัญชา")
-          
-          tr
-          td  !{'  '}ข้าพเจ้า
-            input(type="text", name="firstname" placeholder="ชื่อ")
-            |!{' '}
-            input(type="text", name="lastname" placeholder="นามสกุล")
-            |!{' '} ตำแหน่ง
-            input(type="text", name="prologue" placeholder="ตำแหน่ง")
-          tr
-          td ระดับ
-            input(type="text", name="rank" placeholder="ระดับ")
-            |!{' '} สังกัด   
-            input(type="text", name="degree" placeholder="สังกัด")
-          tr
-          td มีความประสงค์ลาไปช่วยเหลือภริยาโดยชอบด้วยกฏหมายชื่อ
-            input(type='text', name="name1" placeholder='ชื่อภริยา')
+  body
+    header
+      h4(align='center') กรณีศึกษาการพัฒนาระบบการลาออนไลน์ 
+    form(action='/wife', method='post')
+      div(class='absence')
+        h4 ใบลาไปช่วยเหลือภริยาที่คลอดบุตร
+          table(align="center")
+            tr 
+            td(align='right') เขียนที่
+              input(type="text", name="write" placeholder="เขียนที่" ,align="right") 
+            tr 
+            td(align='right') วันที่ 
+              input(type="date", name="date1")
+            tr
+            td เรื่อง ขอลาไปช่วยเหลือภริยาที่คลอดบุตร
             
-          tr
-          td ซึ่งคลอดบุตรเมื่อวันที่
-            input(type="date", name="date2")
-            |!{' '} จึงขออนุญาตลาไปช่วยเหลือภริยาที่คลอดบุตรตั้งแต่
-          tr
-          td วันที่
-            input(type="date", name="date3")
-            |!{' '} ถึงวันที่   
-            input(type="date", name="date4")
-            |!{' '} มีกำหนด
-            input(type="text", name="day1")
-            |!{' '} วันทำการ   
-          tr
-          td ในระหว่างลาจะติดต่อข้าพเจ้าได้ที่       
-            input(type="text", name="address")
-            |!{' '} หมายเลขโทรศัพท์
-            input(type="tel", name="phone")
-          tr
-          td(align='left')
-            a(href='/leave') ย้อนกลับ
-          td(align='center')
-            input(type='submit', value='send', align='center')
+            tr  
+            td (คำขึ้นต้น)
+              input(type="text", name="title" placeholder="เรียนผ้บังคับบัญชา")
+            
+            tr
+            td  !{'  '}ข้าพเจ้า
+              input(type="text", name="firstname" placeholder="ชื่อ")
+              |!{' '}
+              input(type="text", name="lastname" placeholder="นามสกุล")
+              |!{' '} ตำแหน่ง
+              input(type="text", name="prologue" placeholder="ตำแหน่ง")
+            tr
+            td ระดับ
+              input(type="text", name="rank" placeholder="ระดับ")
+              |!{' '} สังกัด   
+              input(type="text", name="degree" placeholder="สังกัด")
+            tr
+            td มีความประสงค์ลาไปช่วยเหลือภริยาโดยชอบด้วยกฏหมายชื่อ
+              input(type='text', name="name1" placeholder='ชื่อภริยา')
+              
+            tr
+            td ซึ่งคลอดบุตรเมื่อวันที่
+              input(type="date", name="date2")
+              |!{' '} จึงขออนุญาตลาไปช่วยเหลือภริยาที่คลอดบุตรตั้งแต่
+            tr
+            td วันที่
+              input(type="date", name="date3")
+              |!{' '} ถึงวันที่   
+              input(type="date", name="date4")
+              |!{' '} มีกำหนด
+              input(type="text", name="day1")
+              |!{' '} วันทำการ   
+            tr
+            td ในระหว่างลาจะติดต่อข้าพเจ้าได้ที่       
+              input(type="text", name="address")
+              |!{' '} หมายเลขโทรศัพท์
+              input(type="tel", name="phone")
+            tr
+            td(align='left')
+              a(href='/leave') ย้อนกลับ
+            td(align='center')
+              input(type='submit', value='send', align='center')
+    footer
+      h4 สงวนสิทธิ์ใช้เฉพาะ คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี สาขาวิชาครุศาสตร์วิศวกรรม แขนงวิชาวศวกรรมคอมพิวเตอร์

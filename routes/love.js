@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('love', { title: 'ใบลาไปช่วยเหลือภริยาที่คลอดบุตร' });
+    res.render('love', { title: 'ใบลาติดตามคู่สมรส' });
 });
 
 var ObjectID = require('mongodb').ObjectID;
