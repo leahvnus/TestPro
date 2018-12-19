@@ -20,11 +20,13 @@ var hudRouter = require('./routes/hud');
 //show
 var showdbRouter = require('./routes/showdb');
 var showab1Router = require('./routes/showab1');
-var showwifeRouter = require('./routes/showwife')
-var showloveRouter = require('./routes/showlove')
-var showlearnRouter = require('./routes/showlearn')
-var showhudRouter = require('./routes/showhud')
-var showholidayRouter = require('./routes/showholiday')
+var showwifeRouter = require('./routes/showwife');
+var showloveRouter = require('./routes/showlove');
+var showlearnRouter = require('./routes/showlearn');
+var showhudRouter = require('./routes/showhud');
+var showholidayRouter = require('./routes/showholiday');
+var showdataRouter = require('./routes/showdata');
+
     //update
     //var putRouter = require('./routes/put');
 
@@ -64,6 +66,7 @@ app.use('/showlove', showloveRouter);
 app.use('/showlearn', showlearnRouter);
 app.use('/showhud', showhudRouter);
 app.use('/showholiday', showholidayRouter);
+app.use('/showdata', showdataRouter);
 //app.use('/put', putRouter);
 
 // catch 404 and forward to error handler

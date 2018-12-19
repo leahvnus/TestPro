@@ -23,6 +23,7 @@ var holidaySchema = new Schema({
     day1: { type: String },
     place1: { type: String },
     phone: { type: String },
+    sign: {type: String},
 }, { collection: 'holiday' });
 
 var listholiday = mongoose.model('listholiday', holidaySchema);
@@ -33,7 +34,7 @@ router.get('/', function(req, res, next) {
             return next(err);
         } else {
             //res.json(showdb);
-            res.render('showholiday', { title: 'ข้อมูลการลา', data: showholiday })
+            res.render('showholiday', { title: 'ข้อมูลการลาพักผ่อน', data: showholiday })
         }
     })
 });

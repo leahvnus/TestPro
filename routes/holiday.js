@@ -28,6 +28,7 @@ var holidaySchema = new Schema({
     day1: { type: String },
     place1: { type: String },
     phone: { type: String },
+    sign: {type: String},
 }, { collection: 'holiday' });
 
 var holiday = mongoose.model('holiday', holidaySchema);
@@ -49,6 +50,7 @@ router.post('/', function(req, res) {
         day1: req.body.day1,
         place1: req.body.place1,
         phone: req.body.phone,
+        sign: req.body.sign,
         _id: new ObjectID()
     });
     mongoose.connect('mongodb://localhost:27017/myuser');
