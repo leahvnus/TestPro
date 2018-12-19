@@ -7,7 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var profileRouter = require('./routes/profile');
-//add
+var aboutRouter = require('./routes/about')
+    //add
 var usersRouter = require('./routes/users');
 var absenceRouter = require('./routes/absence');
 var holidayRouter = require('./routes/holiday');
@@ -43,6 +44,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/index', indexRouter);
+app.use('/about', aboutRouter);
 app.use('/users', usersRouter);
 app.use('/', loginRouter);
 app.use('/profile', profileRouter);
