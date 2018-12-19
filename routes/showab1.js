@@ -17,12 +17,13 @@ var listabSchema = new Schema({
     degree: { type: String },
     date2: { type: String },
     date3: { type: String },
-    yes: { type: String },
     no: { type: String },
-    temp1: { type: String },
+    yes: { type: String },
+    tem1: { type: String },
     place1: { type: String },
     phone: { type: String },
     date4: { type: String },
+    tem2: { type: String},
     place2: { type: String },
     date5: { type: String },
     date6: { type: String },
@@ -49,7 +50,7 @@ router.get('/', function(req, res, next) {
             return next(err);
         } else {
             //res.json(showdb);
-            res.render('showab1', { title: 'ข้อมูลการลา', data: showab1 })
+            res.render('showab1', { title: 'ข้อมูลการขอลาอุปสมบท', data: showab1 })
         }
     })
 });

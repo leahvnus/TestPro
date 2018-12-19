@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('leave', { title: 'การลา' });
+    res.render('leave', { title: 'ประเภทการลา' });
 });
 
 module.exports = router;

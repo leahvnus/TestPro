@@ -32,7 +32,7 @@ router.get('/', function(req, res, next) {
             return next(err);
         } else {
             //res.json(showdb);
-            res.render('showhud', { title: 'ข้อมูลการลา', data: showhud })
+            res.render('showhud', { title: 'ข้อมูลการลาไปประกอบพิธีฮัจย์ ณ เมืองเมกกะ ประเทศซาอุดิอาระเบีย', data: showhud })
         }
     })
 });

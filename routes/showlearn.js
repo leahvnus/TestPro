@@ -29,7 +29,6 @@ var learnSchema = new Schema({
     train: { type: String },
     research: { type: String },
     Visit: { type: String },
-    lean1: { type: String },
     course: { type: String },
     location: { type: String },
     country1: { type: String },
@@ -53,7 +52,7 @@ router.get('/', function(req, res, next) {
             return next(err);
         } else {
             //res.json(showdb);
-            res.render('showlearn', { title: 'ข้อมูลการลา', data: showlearn })
+            res.render('showlearn', { title: 'ใบลาไปศึกษา ฝึกอบรม ปฏิบัติการวิจัย หรือดูงาน', data: showlearn })
         }
     })
 });

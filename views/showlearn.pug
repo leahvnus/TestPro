@@ -1,29 +1,70 @@
 extends layout
 
 block content
+  link(rel='stylesheet', href='/stylesheets/ab.css')
   h1=title
+  
   for item in data
-    br
-    th(align="right") เขียนที่
-    td #{item.write}
-    br
-    th วันที่
-    td #{item.date1}
-    br
-    th คำขึ้นต้น
-    td #{item.title}
-    br
-    th ข้าพเจ้าชื่อ
-    td #{item.firstname}
-    br
-    th นามสกุล
-    td #{item.lastname}
-    br
-    th ตำแหน่ง
-    td #{item.prologue}
-    br
-    th ระดับ
-    td #{item.rank}
-    br
-    th สังกัด
-    td #{item.degree}
+    div(class='absence')
+      table(align="center")
+        tr 
+        td(align='right') เขียนที่ #{item.write}
+            
+        tr 
+        td(align='right') วันที่ #{item.date1}
+           
+        tr
+        td เรื่อง..........#{item.topic}..........
+            input(type="text", name="topic" placeholder="เรื่องที่จะขอลา")
+          
+        tr  
+        td (คำขึ้นต้น)..........#{item.title}..........
+          
+        tr
+        td  !{'  '}ข้าพเจ้า ชื่อ..........#{item.firstname}.......... นามสกุล..........#{item.lastname}..........
+            |!{' '} ตำแหน่ง......... #{item.prologue}..........
+
+        tr
+        td ระดับ..........#{item.rank}.......... สังกัด..........#{item.degree}..........
+            |!{' '} เกิดวันที่.......... #{item.birthday}..........
+
+        tr
+        td เข้ารับราชการเมื่อวันที่.......... #{item.firthday}..........
+            |!{' '} ได้รับเงินเดือนเดือนละ..........#{item.salary}..........
+            |!{' '} บาท( #{item.salaryb} )
+
+        tr 
+        td มีความประสงค์ขอลาไป
+
+        tr
+        td #{item.lean} ศึกษาวิชา..........#{item.subject}..........ขั้นปริญญา..........#{item.level}.......... 
+          |!{' '}ณ สถานศึกษา.......... #{item.University}..........
+
+        tr
+        td ประเทศ..........#{item.country}.......... ด้วยทุน..........#{item.bursary}..........
+
+        tr
+        td ..........#{item.train}#{item.research}#{item.Visit}..........
+            |!{' '} ด้าน/หลักสูตร.......... #{item.course}
+            |!{' '} ณ..........#{item.location}
+
+        tr
+        td ทั้งนี้ ตั้งแต่วันที่..........#{item.date2}..........
+            |!{' '} ถึงวันที่..........#{item.date3}..........
+            |!{' '} มีกำหนด..........#{item.year}..........
+            |!{' '} ปี..........#{item.mount}..........
+            |!{' '} เดือน..........#{item.day}..........
+            |!{' '} วัน 
+        tr
+        td ในระหว่างลาจะติดต่อข้าพเจ้าได้ที่.......... #{item.place}..........
+            |!{' '} หมายเลขโทรศัพท์ ..........#{item.phone}..........
+
+        tr
+        td
+            |!{' '} ข้าพเจ้าขอรับรองว่าจะมาปฏิบัติตามกฎหมายและระเบียบของทางข้าราชการเกี่ยวกับการไปศึกษาฝึกอบรม ปฏิบัติการวิจัย หรือดูงาน ทุกประการ
+        tr
+        td(align='right') ลงชื่อ #{item.sign}
+
+        tr
+        td(align='left')
+          a(href='/showdata') ย้อนกลับ

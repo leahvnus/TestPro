@@ -49,7 +49,7 @@ router.get('/', function(req, res, next) {
             return next(err);
         } else {
             //res.json(showdb);
-            res.render('showlove', { title: 'ข้อมูลการลา', data: showlove })
+            res.render('showlove', { title: 'ข้อมูลการลาติดตามคู่สมรส', data: showlove })
         }
     })
 });
