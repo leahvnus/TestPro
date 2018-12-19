@@ -1,38 +1,41 @@
 extends layout
 
 block content
+  link(rel='stylesheet', href='/stylesheets/ab.css')
   h1=title
+  
   for item in data
-    table(align="center")
-      tr 
-      td(align='right') เขียนที่ #{item.write}
- 
-      tr 
-      td(align='right') วันที่ #{item.date1}
+    div(class='absence')
+      table(align="center")
+        tr 
+        td(align='right') เขียนที่ #{item.write}
+  
+        tr 
+        td(align='right') วันที่ #{item.date1}
 
-      tr
-      td เรื่อง  ขอลาพักผ่อน
+        tr
+        td เรื่อง  ขอลาพักผ่อน
+            
+        tr  
+        td (คำขึ้นต้น) #{item.title}
           
-      tr  
-      td (คำขึ้นต้น) #{item.title}
-         
-      tr
-      td ข้าพเจ้า ชื่อ........ #{item.firstname}........... นามสกุล #{item.lastname} ตำแหน่ง #{item.prologue}
-        
-      tr
-      td ระดับ  #{item.rank} สังกัด #{item.degree}
+        tr
+        td ข้าพเจ้า ชื่อ........ #{item.firstname}........... นามสกุล #{item.lastname} ตำแหน่ง #{item.prologue}
+          
+        tr
+        td ระดับ  #{item.rank} สังกัด #{item.degree}
 
-      tr
-      td มีวันลาพักผ่อนสะสม #{item.number1} วันทำการ มีสิทธิลาพักผ่อนประจำปีนี้อีก #{item.number2} วันทำการ รวมเป็น #{item.number3} วันทำการ
+        tr
+        td มีวันลาพักผ่อนสะสม #{item.number1} วันทำการ มีสิทธิลาพักผ่อนประจำปีนี้อีก #{item.number2} วันทำการ รวมเป็น #{item.number3} วันทำการ
 
-      tr
-      td ขอลาพักผ่อนตั้งแต่วันที่  #{item.date5} ถึงวันที่ #{item.date6} มีกำหนด #{item.day1} วัน    
+        tr
+        td ขอลาพักผ่อนตั้งแต่วันที่  #{item.date5} ถึงวันที่ #{item.date6} มีกำหนด #{item.day1} วัน    
 
-      tr
-      td ในระหว่างลาจะติดต่อข้าพเจ้าได้ที่ #{item.place1} หมายเลขโทรศัพท์ #{item.phone}
+        tr
+        td ในระหว่างลาจะติดต่อข้าพเจ้าได้ที่ #{item.place1} หมายเลขโทรศัพท์ #{item.phone}
 
-      tr
-      td(align='right') ลงชื่อ #{item.sign}
-      tr
-      td(align='left')
-        a(href='/showdata') ย้อนกลับ
+        tr
+        td(align='right') ลงชื่อ #{item.sign}
+        tr
+        td(align='left')
+          a(href='/showdata') ย้อนกลับ
