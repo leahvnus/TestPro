@@ -1,0 +1,67 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/ab.css')
+  form(action='/hud', method='post')
+  
+    div(class='absence')
+      h4 ใบลาไปประกอบพิธีฮัจย์ ณ เมืองเมกกะ ประเทศซาอุดิอาระเบีย
+        table(align="center")
+          tr 
+          td(align='right') เขียนที่
+            input(type="text", name="write" placeholder="เขียนที่" ,align="right") 
+          tr 
+          td(align='right') วันที่ 
+            input(type="date", name="date1")
+          tr
+          td เรื่อง ขอลงไปประกอบพิธีฮัจย์
+          
+          tr  
+          td (คำขึ้นต้น)
+            input(type="text", name="title" placeholder="เรียนผ้บังคับบัญชา")
+          
+          tr
+          td  |!{'  '} ข้าพเจ้า
+            input(type="text", name="firstname" placeholder="ชื่อ")
+            |!{' '}
+            input(type="text", name="lastname" placeholder="นามสกุล")
+            |!{' '} ตำแหน่ง
+            input(type="text", name="prologue" placeholder="ตำแหน่ง")
+
+          tr
+          td ระดับ
+            input(type="text", name="rank" placeholder="ระดับ")
+            |!{' '} สังกัด   
+            input(type="text", name="degree" placeholder="สังกัด")
+            |!{' '} เข้ารับราชการเมื่อวันที่   
+            input(type="date", name="firstday")
+
+          tr 
+          td ข้าพเจ้า 
+            input(type="checkbox", name="yes") 
+            |!{' '} ยังไม่เคย    
+            input(type="checkbox", name="no")
+            |!{' '} เคย   ไปประกอบพิธีฮัจย์ บัดนี้ มีศรัทธาจะไปประกอบพิธีฮัจย์ ณ เมืองเมกกะ ประเทศซาอุดิอาระเบีย จึงขอลาหยุดราชการ    
+
+          tr
+          td ตั้งแต่วันที่
+            input(type="date", name="date")
+            |!{' '} ถึงวันที่  
+            input(type="date", name="date1")
+            |!{' '} ตั้งแต่วันที่
+            input(type="date", name="date2")
+            |!{' '} ถึงวันที่  
+            input(type="date", name="date3")
+          tr
+          td มีกำหนด
+            input(type="text", name="day1")
+            |!{' '} วัน
+         
+          tr
+          td(align='right') ลงชื่อ
+            input(type="text" ,name="sign")
+          tr
+          td(align='left')
+            a(href='/leave') ย้อนกลับ
+          td(align='center')
+            input(type='submit', value='send', align='center')

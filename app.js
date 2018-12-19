@@ -16,6 +16,7 @@ var wifeRouter = require('./routes/wife');
 var leaveRouter = require('./routes/leave');
 var loveRouter = require('./routes/love');
 var leanRouter = require('./routes/lean');
+var hudRouter = require('./routes/hud');
 //var putRouter = require('./routes/put');
 
 var app = express();
@@ -45,6 +46,7 @@ app.use('/wife', wifeRouter);
 app.use('/leave', leaveRouter);
 app.use('/love', loveRouter);
 app.use('/lean', leanRouter);
+app.use('/hud', hudRouter);
 //app.use('/put', putRouter);
 
 // catch 404 and forward to error handler
