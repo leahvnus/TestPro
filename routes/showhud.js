@@ -20,7 +20,6 @@ var hudSchema = new Schema({
     no: { type: String },
     date1: { type: String },
     date2: { type: String },
-    date3: { type: String },
     day1: { type: String },
     sign: { type: String },
 }, { collection: 'hud' });
