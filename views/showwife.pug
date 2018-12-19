@@ -1,45 +1,50 @@
 extends layout
 
 block content
+  link(rel='stylesheet', href='/stylesheets/ab.css')
   h1=title
+  
   for item in data
-    br
-    th(align="right") เขียนที่
-    td #{item.write}
-    br
-    th วันที่
-    td #{item.date1}
-    br
-    th เรื่อง ขอลาไปช่วยเหลือภริยาที่คลอดบุตร
-    br
-    th คำขึ้นต้น
-    td #{item.title}
-    br
-    th ข้าพเจ้าชื่อ
-    td #{item.firstname}
-    br
-    th นามสกุล
-    td #{item.lastname}
-    br
-    th ตำแหน่ง
-    td #{item.prologue}
-    br
-    th ระดับ
-    td #{item.rank}
-    br
-    th สังกัด
-    td #{item.degree}
-    th มีความประสงค์ลาไปช่วยเหลือภริยาโดยชอบด้วยกฏหมายชื่อ
-    td #{item.name1}
-    th ซึ่งคลอดบุตรเมื่อวันที่
-    td #{item.date2}
-    th จึงขออนุญาตลาไปช่วยเหลือภริยาที่คลอดบุตรตั้งแต่
-    td #{item.date3}
-    th ถึงวันที่ 
-    td #{item.date4}
-    th มีกำหนด
-    td #{item.day1} วันทำการ
-    th ในระหว่างลาจะติดต่อข้าพเจ้าได้ที่
-    td #{item.address}
-    th หมายเลขโทรศัพท์
-    td #{item.phone}
+    div(class='absence')
+      table(align="center")
+        tr 
+        td(align='right') เขียนที่ #{item.write}
+
+        tr 
+        td(align='right') วันที่ #{item.date}
+
+        tr
+        td เรื่อง ขอลาไปช่วยเหลือภริยาที่คลอดบุตร
+          
+        tr  
+        td (คำขึ้นต้น) ..........#{item.title}..........
+          
+        tr
+        td  !{'  '}ข้าพเจ้า  ชื่อ ..........#{item.firstname}.......... นามสกุล .......... #{item.lastname}..........
+            |!{' '} ตำแหน่ง .......... #{item.sign}..........
+
+        tr
+        td ระดับ .......... #{item.rank}..........
+            |!{' '} สังกัด .......... #{item.degree}..........
+
+        tr
+        td มีความประสงค์ลาไปช่วยเหลือภริยาโดยชอบด้วยกฏหมายชื่อ ..........#{item.name1}..........
+            
+        tr
+        td ซึ่งคลอดบุตรเมื่อวันที่ .......... #{item.date2}..........
+            |!{' '} จึงขออนุญาตลาไปช่วยเหลือภริยาที่คลอดบุตรตั้งแต่
+        tr
+        td วันที่ #{item.date3}
+            |!{' '} ถึงวันที่ ..........#{item.date4}..........
+            |!{' '} มีกำหนด ..........#{item.day1}..........
+            |!{' '} วันทำการ   
+        tr
+        td ในระหว่างลาจะติดต่อข้าพเจ้าได้ที่ ..........#{item.address}..........      
+            |!{' '} หมายเลขโทรศัพท์ ..........#{item.phone}..........
+
+        tr
+        td(align='right') ลงชื่อ #{item.sign}
+        
+        tr
+        td(align='left')
+          a(href='/showdata') ย้อนกลับ

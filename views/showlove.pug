@@ -1,69 +1,77 @@
 extends layout
 
 block content
+  link(rel='stylesheet', href='/stylesheets/ab.css')
   h1=title
+  
   for item in data
-    br
-    th(align="right") เขียนที่
-    td #{item.write}
-    br
-    th วันที่
-    td #{item.date1}
-    br
-    th คำขึ้นต้น
-    td #{item.title}
-    br
-    th ข้าพเจ้าชื่อ
-    td #{item.firstname}
-    br
-    th นามสกุล
-    td #{item.lastname}
-    br
-    th ตำแหน่ง
-    td #{item.prologue}
-    br
-    th ระดับ
-    td #{item.rank}
-    br
-    th สังกัด
-    td #{item.degree}
-    th ได้รับเงินเดือนเดือนละ
-    td #{item.salary} บาท
-    th (
-    td #{item.salaryb} )
-    th มีความประสงค์ขอลาติดตามคู่สมรส ชื่อ 
-    td #{item.name1}
-    th ตำแหน่ง 
-    td #{item.prologue1}
-    th ระดับ
-    td #{item.rank1}
-    th สังกัด
-    td #{item.degree1}
-    th ซึ่งไปปฏิบัติงานราชการ/ปฏิบัติงาน ณ ประเทศ 
-    td #{item.country}
-    th มีกำหนด
-    td #{item.year} ปี
-    td #{item.mount} เดือน
-    td #{item.day} วัน
-    th จึงขออนุญาตลาติดตามคู่สมรสมีกำหนด
-    td #{item.year1} ปี
-    td #{item.mount1} เดือน
-    td #{item.day1} วัน
-    th ตั้งแต่วันที่
-    td #{item.date2}
-    th ถึงวันที่
-    td #{item.date3}
-    th ครั้งสุดท้ายข้าพเจ้าได้ลาติดตามคู่สมรสไปประเทศ
-    td #{item.country1}
-    th เป็นเวลา
-    td #{item.year2} ปี
-    td #{item.mount2} เดือน
-    td #{item.day2} วัน
-    th เมื่อวันที่
-    td #{item.date4}
-    th ถึงวันที่
-    td #{item.date5}
-    th ในกรณีลาติดต่อกับครั้งก่อน รวมทั้งครั้งนี้ด้วย เป็นเวลา
-    td #{item.year3} ปี
-    td #{item.mount3} เดือน 
-    td #{item.day3} วัน 
+    div(class='absence')
+      table(align="center")
+          tr 
+          td(align='right') เขียนที่ #{item.write}
+
+          tr 
+          td(align='right') วันที่ #{item.date1}
+            input(type="date", name="date1")
+          tr
+          td เรื่อง ขอลาไปช่วยเหลือภริยาที่คลอดบุตร
+          
+          tr  
+          td (คำขึ้นต้น)..........#{item.title}..........
+          
+          tr
+          td  !{'  '}ข้าพเจ้า ชื่อ..........#{item.firstname}.......... นามสกุล..........#{item.lastname}..........
+            |!{' '} ตำแหน่ง..........#{item.prologue}..........
+
+          tr
+          td ระดับ #{item.rank}
+            |!{' '} สังกัด..........#{item.degree}..........
+
+          tr
+          td  !{'  '}ได้รับเงินเดือนเดือนละ.......... #{item.salary}..........( #{item.salaryb} )
+
+          tr
+          td มีความประสงค์ขอลาติดตามคู่สมรส ชื่อ.......... #{item.name1}..........
+
+          tr
+          td ตำแหน่ง.......... #{item.prologue1}..........
+            |!{' '}ระดับ.......... #{item.rank1}..........
+            |!{' '} สังกัด.......... #{item.drgree1}..........
+
+          tr
+          td ซึ่งไปปฏิบัติราชการ/ปฏิบัติงาน ณ ประเทศ.......... #{item.country}..........
+
+          tr
+          td มีกำหนด.......... #{item.year}..........
+            |!{' '} ปี..........#{item.mount}..........
+            |!{' '} เดือน.......... #{item.day}..........
+            |!{' '} วัน 
+            |!{' '} จึงขออนุญาติลาติดตามคู่สมรสมีกำหนด 
+            |!{' '} ..........#{item.year1}..........
+            |!{' '} ปี.......... #{item.mount1}..........
+            |!{' '} เดือน.......... #{item.day1}..........
+            |!{' '} วัน
+          tr
+          td ตั้งแต่วันที่ ..........#{item.date2}..........
+            |!{' '} ถึงวันที่ ..........#{item.date3}..........
+          tr
+          td ครั้งสุดท้ายข้าพเจ้าได้ลาติดตามคู่สมรสไปประเทศ ..........#{item.country1} ..........  
+
+          tr
+          td เป็นเวลา ..........#{item.year2}..........
+            |!{' '} ปี.......... #{item.mount2}..........
+            |!{' '} เดือน.......... #{item.day2}..........
+            |!{' '} วัน เมื่อวันที่ ..........#{item.date4}..........
+            |!{' '} ถึงวันที่ ..........#{item.date5}..........
+
+          tr
+          td ในกรณีลาติดต่อกับครั้งก่อน รวมทั้งครั้งนี้ด้วย เป็นเวลา.......... #{item.year3}..........
+            |!{' '} ปี ..........#{item.mount3}..........
+            |!{' '} เดือน ..........#{item.day3}..........
+            |!{' '} วัน
+          tr
+          td(align='right') ลงชื่อ #{item.sign}
+
+          tr
+          td(align='left')
+            a(href='/showdata') ย้อนกลับ
