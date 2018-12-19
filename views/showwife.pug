@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1=title
+  for item in data
+    br
+    th(align="right") เขียนที่
+    td #{item.write}
+    br
+    th วันที่
+    td #{item.date1}
+    br
+    th คำขึ้นต้น
+    td #{item.title}
+    br
+    th ข้าพเจ้าชื่อ
+    td #{item.firstname}
+    br
+    th นามสกุล
+    td #{item.lastname}
+    br
+    th ตำแหน่ง
+    td #{item.prologue}
+    br
+    th ระดับ
+    td #{item.rank}
+    br
+    th สังกัด
+    td #{item.degree}

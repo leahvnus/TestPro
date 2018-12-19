@@ -5,19 +5,27 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var profileRouter = require('./routes/profile');
+//add
+var usersRouter = require('./routes/users');
 var absenceRouter = require('./routes/absence');
-var showdbRouter = require('./routes/showdb');
-var showab1Router = require('./routes/showab1');
 var holidayRouter = require('./routes/holiday');
 var wifeRouter = require('./routes/wife');
 var leaveRouter = require('./routes/leave');
 var loveRouter = require('./routes/love');
-var leanRouter = require('./routes/lean');
+var learnRouter = require('./routes/learn');
 var hudRouter = require('./routes/hud');
-//var putRouter = require('./routes/put');
+//show
+var showdbRouter = require('./routes/showdb');
+var showab1Router = require('./routes/showab1');
+var showwifeRouter = require('./routes/showwife')
+var showloveRouter = require('./routes/showlove')
+var showlearnRouter = require('./routes/showlearn')
+var showhudRouter = require('./routes/showhud')
+var showholidayRouter = require('./routes/showholiday')
+    //update
+    //var putRouter = require('./routes/put');
 
 var app = express();
 var mongoose = require('mongoose');
@@ -39,14 +47,21 @@ app.use('/users', usersRouter);
 app.use('/', loginRouter);
 app.use('/profile', profileRouter);
 app.use('/absence', absenceRouter);
-app.use('/showdb', showdbRouter);
-app.use('/showab1', showab1Router);
-app.use('/holiday',holidayRouter);
+app.use('/holiday', holidayRouter);
 app.use('/wife', wifeRouter);
 app.use('/leave', leaveRouter);
 app.use('/love', loveRouter);
-app.use('/lean', leanRouter);
+app.use('/learn', learnRouter);
 app.use('/hud', hudRouter);
+
+//show
+app.use('/showdb', showdbRouter);
+app.use('/showab1', showab1Router);
+app.use('/showwife', showwifeRouter);
+app.use('/showlove', showloveRouter);
+app.use('/showlearn', showlearnRouter);
+app.use('/showhud', showhudRouter);
+app.use('/showholiday', showholidayRouter);
 //app.use('/put', putRouter);
 
 // catch 404 and forward to error handler

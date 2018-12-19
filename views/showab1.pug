@@ -1,54 +1,77 @@
 extends layout
 
 block content
-  h1 ใบลา
+  h1=title
+  for item in data
     br
     th(align="right") เขียนที่
+    td #{item.write}
     br
     th วันที่
+    td #{item.date1}
     br
     th คำขึ้นต้น
+    td #{item.title}
     br
     th ข้าพเจ้าชื่อ
+    td #{item.firstname}
     br
     th นามสกุล
+    td #{item.lastname}
     br
     th ตำแหน่ง
+    td #{item.prologue}
     br
     th ระดับ
+    td #{item.rank}
     br
     th สังกัด
-    for item in data
-        tr
-            td #{item.write}
-            td #{item.date1}
-            td #{item.title}
-            td #{item.firstname}
-            td #{item.lastname}
-            td #{item.prologue}
-            td #{item.rank}
-            td #{item.degree}
-            td #{item.date2}
-            td #{item.date3}
-            td #{item.yes}
-            td #{item.no}
-            td #{item.temp1}
-            td #{item.place1}
-            td #{item.phone}
-            td #{item.date4}
-            td #{item.place2}
-            td #{item.date5}
-            td #{item.date6}
-            td #{item.day1}
-            td #{item.sign}
-            td #{item.signn1}
-            td #{item.comment}
-            td #{item.sign2}
-            td #{item.signn2}
-            td #{item.rank1}
-            td #{item.date7}
-            td #{item.comment1}
-            td #{item.sign3}
-            td #{item.signn3}
-            td #{item.rank2}
-            td #{item.date8}
+    td #{item.degree}
+    th เกิดวันที่
+    td #{item.date2}
+    th เข้ารับราชการเมื่อวันที่
+    td #{item.date3}
+    th ข้าพเจ้า        
+    td #{item.yes}
+    td #{item.no}
+    th อุปสมบท
+    th บัดนี้มีศรัทธาจะอุปสมบทใบพระพุทธศาสนา ณ วัด
+    td #{item.temp1}
+    th
+    td #{item.place1}
+    th
+    td #{item.phone}
+    th
+    td #{item.date4}
+    th
+    td #{item.place2}
+    th
+    td #{item.date5}
+    th
+    td #{item.date6}
+    th
+    td #{item.day1}
+    th
+    td #{item.sign}
+    th
+    td #{item.signn1}
+    th
+    td #{item.comment}
+    th
+    td #{item.sign2}
+    th
+    td #{item.signn2}
+    th
+    td #{item.rank1}
+    th
+    td #{item.date7}
+    th
+    td #{item.comment1}
+    th
+    td #{item.sign3}
+    th
+    td #{item.signn3}
+    th
+    td #{item.rank2}
+    th
+    td #{item.date8}

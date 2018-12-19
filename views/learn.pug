@@ -2,7 +2,7 @@ extends layout
 
 block content
   link(rel='stylesheet', href='/stylesheets/ab.css')
-  form(action='/lean', method='post')
+  form(action='/learn', method='post')
   
     div(class='absence')
       h4 ใบลาไปศึกษา ฝึกอบรม ปฏิบัติการวิจัย หรือดูงาน
@@ -41,7 +41,7 @@ block content
           td เข้ารับราชการเมื่อวันที่   
             input(type="date", name="firstday")
             |!{' '} ได้รับเงินเดือนเดือนละ
-            input(type="text", name="Salary" placeholder="เงินเดือนที่ได้รับ")
+            input(type="text", name="salary" placeholder="เงินเดือนที่ได้รับ")
             |!{' '} บาท
             input(type="text", name="salaryb" placeholder="เขียนจํานวนเงินเป็นตัวหนังสือ")
 
@@ -72,7 +72,7 @@ block content
             |!{' '} ปฏิบัติการวิจัย
             input(type="checkbox", name="Visit")
             |!{' '} ดูงาน
-            input(type="checkbox", name="lean")
+            input(type="checkbox", name="lean1")
             |!{' '} ด้าน/หลักสูตร
             input(type="text", name="course",)
             |!{' '} ณ  
@@ -81,7 +81,7 @@ block content
           td ประเทศ
             input(type="text", name="country1", placeholder="ชื่อประเทศ")
             |!{' '} ด้วยทุน
-            input(type="text", name="bursary", placeholder="ชื่อทุนการศึกษา")
+            input(type="text", name="bursary1", placeholder="ชื่อทุนการศึกษา")
 
           tr
           td ทั้งนี้ ตั้งแต่วันที่ 
