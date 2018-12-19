@@ -13,7 +13,7 @@ var ObjectID = require('mongodb').ObjectID;
 
 var hudSchema = new Schema({
     write: { type: String },
-    date1: { type: String },
+    date: { type: String },
     title: { type: String },
     firstname: { type: String },
     lastname: { type: String },
@@ -23,10 +23,8 @@ var hudSchema = new Schema({
     firstday: { type: String },
     yes: { type: String },
     no: { type: String },
-    date: { type: String },
     date1: { type: String },
     date2: { type: String },
-    date3: { type: String },
     day1: { type: String },
     sign: { type: String },
 }, { collection: 'hud' });
@@ -47,8 +45,6 @@ router.post('/', function(req, res) {
         no: req.body.no,
         date: req.body.date,
         date1: req.body.date1,
-        date2: req.body.date2,
-        date3: req.body.date3,
         day1: req.body.day1,
         sign: req.body.sign,
         _id: new ObjectID()
@@ -57,7 +53,9 @@ router.post('/', function(req, res) {
     var db = mongoose.connection;
     db.on('error', console.error.bind(console, 'connection error:'));
     db.once('open', function() {
-        console.log("Connection Successful!");
+        console.log("Connection Successful!")
+        var data1 = '<a href="/profile">Back</a>' + '<br/>' + ' ' + 'Success ';
+        res.send(data1);
         //add data to db
         var add = new hud(addhud, { versionKey: false })
         add.save(function(err, newOne) {

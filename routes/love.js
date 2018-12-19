@@ -92,7 +92,9 @@ router.post('/', function(req, res) {
     var db = mongoose.connection;
     db.on('error', console.error.bind(console, 'connection error:'));
     db.once('open', function() {
-        console.log("Connection Successful!");
+        console.log("Connection Successful!")
+        var data1 = '<a href="/profile">Back</a>' + '<br/>' + ' ' + 'Success ';
+        res.send(data1);
         //add data to db
         var add = new love(addlove, { versionKey: false })
         add.save(function(err, newOne) {

@@ -8,7 +8,7 @@ var Schema = mongoose.Schema;
 
 var hudSchema = new Schema({
     write: { type: String },
-    date1: { type: String },
+    date: { type: String },
     title: { type: String },
     firstname: { type: String },
     lastname: { type: String },
@@ -18,10 +18,8 @@ var hudSchema = new Schema({
     firstday: { type: String },
     yes: { type: String },
     no: { type: String },
-    date: { type: String },
     date1: { type: String },
     date2: { type: String },
-    date3: { type: String },
     day1: { type: String },
     sign: { type: String },
 }, { collection: 'hud' });
