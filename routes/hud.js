@@ -13,7 +13,7 @@ var ObjectID = require('mongodb').ObjectID;
 
 var hudSchema = new Schema({
     write: { type: String },
-    date1: { type: String },
+    date: { type: String },
     title: { type: String },
     firstname: { type: String },
     lastname: { type: String },
@@ -23,10 +23,8 @@ var hudSchema = new Schema({
     firstday: { type: String },
     yes: { type: String },
     no: { type: String },
-    date: { type: String },
     date1: { type: String },
     date2: { type: String },
-    date3: { type: String },
     day1: { type: String },
     sign: { type: String },
 }, { collection: 'hud' });
@@ -36,7 +34,7 @@ var hud = mongoose.model('hud', hudSchema);
 router.post('/', function(req, res) {
     var addhud = new hud({
         write: req.body.write,
-        date1: req.body.date1,
+        date: req.body.date,
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         prologue: req.body.prologue,
@@ -45,10 +43,8 @@ router.post('/', function(req, res) {
         firstday: req.body.firstday,
         yes: req.body.yes,
         no: req.body.no,
-        date: req.body.date,
         date1: req.body.date1,
         date2: req.body.date2,
-        date3: req.body.date3,
         day1: req.body.day1,
         sign: req.body.sign,
         _id: new ObjectID()

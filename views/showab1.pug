@@ -1,80 +1,52 @@
 extends layout
 
 block content
+  link(rel='stylesheet', href='/stylesheets/ab.css')
   h1=title
+  
   for item in data
-    br
-    th(align="right") เขียนที่
-    td #{item.write}
-    br
-    th วันที่
-    td #{item.date1}
-    br
-    th คำขึ้นต้น
-    td #{item.title}
-    br
-    th ข้าพเจ้าชื่อ
-    td #{item.firstname}
-    br
-    th นามสกุล
-    td #{item.lastname}
-    br
-    th ตำแหน่ง
-    td #{item.prologue}
-    br
-    th ระดับ
-    td #{item.rank}
-    br
-    th สังกัด
-    td #{item.degree}
-    th เกิดวันที่
-    td #{item.date2}
-    th เข้ารับราชการเมื่อวันที่
-    td #{item.date3}
-    th ข้าพเจ้า        
-    td #{item.yes}
-    td #{item.no}
-    th อุปสมบท
-    th บัดนี้มีศรัทธาจะอุปสมบทใบพระพุทธศาสนา ณ วัด
-    td #{item.temp1}
-    th ตั้งอยู่ ณ 
-    td #{item.place1}
-    th หมายเลขโทรศัพท์ 
-    td #{item.phone}
-    th กำหนดอุปสมบทวันที่
-    td #{item.date4}
-    th และจะจำพรรษาอยู่ ณ วัด 
-    td #{item.place2}
-    th ตั้งอยู่ ณ 
-    td #{item.date5}
-    th จึงขออนุญาตลาอุปสมบทตั้งแต่วันที่
-    td #{item.date6}
-    th มีกำหนด
-    td #{item.day1}
-    th (ลงชื่อ)
-    td #{item.sign}
-    th (
-    td #{item.signn1} 
-    th )
-    th ความเห็นผู้บังคับบัญชา
-    td #{item.comment}
-    th (ลงชื่อ)
-    td #{item.sign2}
-    th (
-    td #{item.signn2}
-    th )
-    th (ตำแหน่ง)
-    td #{item.rank1}
-    th วันที่
-    td #{item.date7}
-    th คำสั่ง
-    td #{item.comment1}
-    th (ลงชื่อ)
-    td #{item.sign3}
-    th (
-    td #{item.signn3}
-    th )
-    th (ตำแหน่ง)
-    td #{item.rank2}
-    th วันที่
-    td #{item.date8}
+    div(class='absence')
+      table(align="center")
+      table(align="center")
+        tr 
+        td(align='right') เขียนที่ #{item.write}
+
+        tr 
+        td(align='right') วันที่ #{item.date1}
+
+        tr
+        td เรื่อง  ขอลาอุปสมบท
+          
+        tr  
+        td (คำขึ้นต้น)..........#{item.title}..........
+          
+        tr
+        td  ข้าพเจ้า ชื่อ..........#{item.firstname}.......... นามสกุล..........#{item.lastname}..........
+            |!{' '} ตำแหน่ง..........#{item.prologue}..........
+ 
+        tr
+        td ระดับ..........#{item.rank}.......... สังกัด..........#{item.degree}.......... เกิดวันที่..........#{item.date2}..........
+
+        tr
+        td เข้ารับราชการเมื่อวันที่..........#{item.date3}..........
+          |!{' '} ข้าพเจ้า..........#{item.no} #{item.yes}.......... อุปสมบท    
+          |!{' '} บัดนี้มีศรัทธาจะอุปสมบทในพระพุทธศาสนา 
+        tr
+        td ณ วัด..........#{item.tem1}.......... ตั้งอยู่ ณ..........#{item.place1}.......... 
+          |!{' '} หมายเลขโทรศัพท์.......... #{item.phone}..........
+
+        tr
+        td กำหนดอุปสมบทวันที่..........#{item.date4}.......... และจะจำพรรษาอยู่ ณ วัด.......... #{item.tem2}..........
+
+        tr
+        td ตั้งอยู่ ณ.......... #{item.place2}.......... จึงขออนุญาติลาอุปสมบทตั้งแต่วันที่.......... #{item.date5}.......... ถึงวันที่.......... #{item.date6}..........
+
+        tr
+        td มีกำหนด..........  #{item.day1}..........  วัน   
+
+        tr
+        td(align='right') ลงชื่อ #{item.sign}
+            
+        tr
+        td(align='left')
+            a(href='/showdata') ย้อนกลับ

@@ -1,29 +1,42 @@
 extends layout
 
 block content
+  link(rel='stylesheet', href='/stylesheets/ab.css')
   h1=title
+  
   for item in data
-    br
-    th(align="right") เขียนที่
-    td #{item.write}
-    br
-    th วันที่
-    td #{item.date1}
-    br
-    th คำขึ้นต้น
-    td #{item.title}
-    br
-    th ข้าพเจ้าชื่อ
-    td #{item.firstname}
-    br
-    th นามสกุล
-    td #{item.lastname}
-    br
-    th ตำแหน่ง
-    td #{item.prologue}
-    br
-    th ระดับ
-    td #{item.rank}
-    br
-    th สังกัด
-    td #{item.degree}
+    div(class='absence')
+      table(align="center")
+        tr 
+        td(align='right') เขียนที่ #{item.write} 
+        tr 
+        td(align='right') วันที่ #{item.date}
+        tr
+        td เรื่อง ขอลงไปประกอบพิธีฮัจย์
+         
+        tr  
+        td (คำขึ้นต้น)..........#{item.title}..........
+          
+        tr
+        td !{'  '} ข้าพเจ้า ชื่อ..........#{item.firstname}.......... นามสกุล..........#{item.lastname}..........
+          |!{' '} ตำแหน่ง..........#{item.prologue}..........
+
+        tr
+        td ระดับ.......... #{item.rank}..........
+          |!{' '} สังกัด..........#{item.degree}..........
+          |!{' '} เข้ารับราชการเมื่อวันที่..........#{item.firstday}..........
+
+        tr 
+        td ข้าพเจ้า ..........#{item.no}  #{item.yes}.......... ไปประกอบพิธีฮัจย์ บัดนี้ มีศรัทธาจะไปประกอบพิธีฮัจย์ ณ เมืองเมกกะ ประเทศซาอุดิอาระเบีย จึงขอลาหยุดราชการ    
+
+        tr
+        td ตั้งแต่วันที่..........#{item.date1}..........ถึงวันที่..........#{item.date2}..........
+            
+        tr
+        td มีกำหนด.......... #{item.day1}..........วัน
+         
+        tr
+        td(align='right') ลงชื่อ #{item.sign}
+        tr
+        td(align='left')
+          a(href='/showdata') ย้อนกลับ

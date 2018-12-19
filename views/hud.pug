@@ -12,7 +12,7 @@ block content
             input(type="text", name="write" placeholder="เขียนที่" ,align="right") 
           tr 
           td(align='right') วันที่ 
-            input(type="date", name="date1")
+            input(type="date", name="date")
           tr
           td เรื่อง ขอลงไปประกอบพิธีฮัจย์
           
@@ -38,20 +38,17 @@ block content
 
           tr 
           td ข้าพเจ้า 
-            input(type="checkbox", name="yes") 
+            input(type="checkbox", name="no" value="ยังไม่เคย") 
             |!{' '} ยังไม่เคย    
-            input(type="checkbox", name="no")
+            input(type="checkbox", name="yes" value="เคย")
             |!{' '} เคย   ไปประกอบพิธีฮัจย์ บัดนี้ มีศรัทธาจะไปประกอบพิธีฮัจย์ ณ เมืองเมกกะ ประเทศซาอุดิอาระเบีย จึงขอลาหยุดราชการ    
 
           tr
           td ตั้งแต่วันที่
-            input(type="date", name="date")
-            |!{' '} ถึงวันที่  
             input(type="date", name="date1")
-            |!{' '} ตั้งแต่วันที่
-            input(type="date", name="date2")
             |!{' '} ถึงวันที่  
-            input(type="date", name="date3")
+            input(type="date", name="date2")
+            
           tr
           td มีกำหนด
             input(type="text", name="day1")
