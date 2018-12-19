@@ -10,10 +10,12 @@ var loginRouter = require('./routes/login');
 var profileRouter = require('./routes/profile');
 var absenceRouter = require('./routes/absence');
 var showdbRouter = require('./routes/showdb');
+var showab1Router = require('./routes/showab1');
 var holidayRouter = require('./routes/holiday');
 var wifeRouter = require('./routes/wife');
 var leaveRouter = require('./routes/leave');
 var loveRouter = require('./routes/love');
+var leanRouter = require('./routes/lean');
 //var putRouter = require('./routes/put');
 
 var app = express();
@@ -37,10 +39,12 @@ app.use('/', loginRouter);
 app.use('/profile', profileRouter);
 app.use('/absence', absenceRouter);
 app.use('/showdb', showdbRouter);
+app.use('/showab1', showab1Router);
 app.use('/holiday',holidayRouter);
 app.use('/wife', wifeRouter);
 app.use('/leave', leaveRouter);
 app.use('/love', loveRouter);
+app.use('/lean', leanRouter);
 //app.use('/put', putRouter);
 
 // catch 404 and forward to error handler
